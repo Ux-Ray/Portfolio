@@ -312,4 +312,12 @@ footer {
   .cta{ padding:6px 12px; font-weight:600; }
 }
 
+/* Navbar overrides */
+header.navbar a { text-decoration: none; }
+header.navbar .icon-link { color:#fff; }
+header.navbar .cta { color:#000; background:#fff; }
+
+/* Optional: if the old menu still exists, hide it */
+header.navbar .menu { display:none; }
+
 
