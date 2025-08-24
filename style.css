@@ -287,3 +287,29 @@ footer {
 }
 
 
+/* Minimal navbar */
+.navbar{
+  display:flex; justify-content:space-between; align-items:center;
+  background:#000; padding:14px 36px; position:sticky; top:0; z-index:10;
+}
+.logo img{ height:34px; display:block; }
+
+.header-actions{ display:flex; align-items:center; gap:14px; }
+
+.cta{
+  background:#fff; color:#000; text-decoration:none; font-weight:700;
+  padding:8px 14px; border-radius:999px; line-height:1;
+}
+.cta:hover{ filter:brightness(0.95); }
+
+.icon-link{ display:inline-flex; align-items:center; }
+.icon-link svg{ color:#fff; opacity:.85; transition:opacity .15s, transform .15s; }
+.icon-link:hover svg{ opacity:1; transform:translateY(-1px); }
+
+/* Optional: on very small screens show just the icons/CTA tighter */
+@media (max-width:480px){
+  .navbar{ padding:12px 18px; }
+  .cta{ padding:6px 12px; font-weight:600; }
+}
+
+
