@@ -259,3 +259,29 @@ footer {
   .project-thumb { width: 100%; height: 180px; }
 }
 
+
+/* Layout for the projects list */
+.projects { padding: 0 36px 60px; }
+.projects h2 { margin: 40px 0 16px; }
+
+/* Two cards side-by-side */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(420px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Let the card fill its grid cell (we'll rely on grid gap, not margins) */
+.project-card { margin: 0; height: 100%; }
+
+/* Stack the two cards on smaller screens */
+@media (max-width: 1000px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* Optional: inside each card, switch to image-on-top on very narrow widths */
+@media (max-width: 560px) {
+  .project-card { grid-template-columns: 1fr; }
+  .project-thumb { width: 100%; height: 180px; }
+}
