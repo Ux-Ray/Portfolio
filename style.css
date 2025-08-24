@@ -54,3 +54,49 @@ footer {
   color: white;
   border-radius: 8px;
 }
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: #fff;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.hero-left nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+.hero-left nav a:hover {
+  text-decoration: underline;
+}
+
+.hero-right {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-right img {
+  max-width: 80%;
+  height: auto;
+}
+
