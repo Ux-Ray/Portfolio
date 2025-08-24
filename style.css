@@ -384,5 +384,31 @@ header.navbar .menu { display:none; }
 }
 
 
+/* Contact: text left, plane right */
+.contact { padding: 24px 36px 60px; }
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr minmax(160px, 280px); /* text | image */
+  align-items: center;
+  column-gap: 24px;
+}
+
+.contact-visual { justify-self: end; }
+.contact-visual img {
+  width: 100%;
+  max-width: 260px; /* <- change this number to make the plane smaller/larger */
+  height: auto;
+  display: block;
+  transform: rotate(-4deg); /* subtle tilt, optional */
+}
+
+/* Mobile: stack */
+@media (max-width: 800px) {
+  .contact-row { grid-template-columns: 1fr; row-gap: 16px; }
+  .contact-visual { justify-self: start; }
+  .contact-visual img { max-width: 200px; }
+}
+
 
 
