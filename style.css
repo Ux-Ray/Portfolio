@@ -100,3 +100,59 @@ footer {
   height: auto;
 }
 
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  padding: 14px 36px;
+}
+.logo img { height: 34px; display: block; }
+.menu ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+.menu a { color: #fff; text-decoration: none; font-weight: 700; }
+.menu a:hover { text-decoration: underline; }
+
+/* --- HERO --- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 36px 40px;
+}
+.hero-left h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  margin-bottom: 14px;
+}
+.hero-left p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 56ch;
+  margin-bottom: 24px;
+}
+.hero-links a {
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  margin-right: 28px;
+}
+.hero-links a:hover { text-decoration: underline; }
+
+.hero-right { text-align: right; }
+.hero-right img {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+}
+
+/* Small screens: stack */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; text-align: left; }
+  .hero-right { text-align: center; }
+  .hero-left { order: 1; }
+  .hero-right { order: 2; }
+}
+
