@@ -343,3 +343,25 @@ header.navbar .menu { display:none; }
 
 .btn.ghost { border:2px solid #000; color:#000; background:transparent; }
 .btn.ghost:hover { background:#000; color:#fff; transform:translateY(-1px); }
+
+/* Buttons (reuse from hero) */
+.btn {
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  line-height:1;
+  border:2px solid transparent;
+  transition:transform .12s ease, filter .12s ease, background .12s ease, color .12s ease;
+}
+.btn.primary { background:#000; color:#fff; border-color:#000; }
+.btn.primary:hover { filter:brightness(.9); transform:translateY(-1px); }
+
+/* Smaller size for cards */
+.btn.small { padding:8px 14px; font-size:0.95rem; }
+
+/* Space the button from the paragraph */
+.project-card .btn { margin-top: 8px; display:inline-flex; align-items:center; gap:8px; }
+
+
