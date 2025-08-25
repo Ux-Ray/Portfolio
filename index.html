@@ -1,155 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My hi Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Darius — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
-  
 <body>
-  <!-- Top navbar ---------------->
-<header class="navbar">
-  <div class="logo">
-    <img src="assets/RLogo.png" alt="Logo">
-  </div>
 
-  <div class="header-actions">
-    <!-- Email -->
-    <a class="icon-link" href="mailto:your.email@example.com" aria-label="Email me">
-      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-        <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-        <path d="M22 8L12 15 2 8" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-
-    <!-- LinkedIn -->
-    <a class="icon-link" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-        <path fill="currentColor"
-          d="M20.45 20.45h-3.56v-5.6c0-1.34-.02-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.95v5.71H9.32V9.5h3.41v1.49h.05c.47-.9 1.63-1.86 3.35-1.86 3.58 0 4.24 2.36 4.24 5.42v5.9zM5.34 8.01a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9.5h3.56v10.95zM22 2H2v20h20V2z"/>
-      </svg>
-    </a>
-  </div>
-</header>
-
-
-  
-
-<!-- Hero: text left, illustration right -->
-<section class="hero">
-  <div class="hero-left">
-    <h1>UX Designer & HCI MSc (University of Trento)</h1>
-    <p>
-      I design research-backed experiences. At FBK I improved a comic-style digital
-      storytelling platform to support the Photovoice methodology and reflection on
-      gender-based discrimination. Previously, I worked as an IT Content Specialist
-      (APIs/IoT/AI) and as an IVR Designer.
-    </p>
-
-    <div class="hero-ctas">
-  <a class="btn primary" href="assets/Darius-CV.pdf" download>Download CV</a>
-  <a class="btn ghost" href="mailto:reyhaneh.ahmd@gmail.com">Email me</a>
-</div>
-
-
-    
-  </div>
-
-  <div class="hero-right">
-    <img src="assets/woman1.png" alt="Minimal line-art portrait" />
-  </div>
-</section>
-
-</section>
-
-
-
-  <!-- ------------------Project ------------------------------------------------------------>
-<section id="projects" class="projects">
-  <h2>Projects</h2>
-
-  <div class="projects-grid">
-    <!-- Project 1 — Thesis -->
-    <article class="project-card">
-      <img class="project-thumb" src="assets/photovoicee.png" alt="Comic-style digital storytelling scene" />
-      <div class="project-copy">
-        <h3>Thesis — Digital Storytelling + Photovoice</h3>
-        <p>
-          I explored how a comic-style digital storytelling platform can support the Photovoice
-          methodology and deepen reflection on gender-based discrimination among students.
-        </p>
-        <!-- Card 1 -->
-<a class="btn ghost small" href="assets/thesis-digital-storytelling-photovoice.pdf" target="_blank" rel="noopener">
-  View the case study
-</a>
-
-
-
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <div class="logo">
+        <img src="assets/RLogo.png" alt="Logo" />
       </div>
-    </article>
 
-    <!-- Project 2 — LinkedIn case study -->
-    <article class="project-card">
-      <img class="project-thumb" src="assets/LinedIn.png" alt="LinkedIn application flow mockups" />
-      <div class="project-copy">
-        <h3>Case Study — Improving How Users Apply &amp; Succeed on LinkedIn</h3>
-        <p>
-          A UX case study focused on streamlining the job-application journey, clarifying guidance,
-          and surfacing actionable feedback so applicants can apply with confidence and improve outcomes.
-        </p>
-        <!-- Card 2 -->
-<a class="btn ghost small" href="assets/linkedin-apply-success-case-study.pdf" target="_blank" rel="noopener">
-  View the case study
-</a>
+      <div class="header-actions">
+        <!-- Email -->
+        <a class="icon-link" href="mailto:your.email@example.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M22 8L12 15 2 8" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a class="icon-link" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path fill="currentColor"
+              d="M20.45 20.45h-3.56v-5.6c0-1.34-.02-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.95v5.71H9.32V9.5h3.41v1.49h.05c.47-.9 1.63-1.86 3.35-1.86 3.58 0 4.24 2.36 4.24 5.42v5.9zM5.34 8.01a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9.5h3.56v10.95zM22 2H2v20h20V2z"/>
+          </svg>
+        </a>
       </div>
-    </article>
-  </div>
-</section>
+    </div>
+  </header>
 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>UX Designer & HCI MSc (University of Trento)</h1>
+      <p>
+        I design research-backed experiences. My thesis improved a comic-style
+        digital storytelling platform to support the Photovoice methodology and
+        reflection on gender-based discrimination.
+      </p>
 
+      <div class="hero-ctas">
+        <a class="btn primary" href="assets/Darius-CV.pdf" download>Download CV</a>
+        <a class="btn ghost" href="mailto:your.email@example.com">Email me</a>
+      </div>
+    </div>
 
+    <div class="hero-right">
+      <img src="assets/woman1.png" alt="Minimal line-art portrait" />
+    </div>
+  </section>
 
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <article class="project-card">
+        <img class="project-thumb" src="assets/thesis-photovoice.jpg" alt="Comic-style digital storytelling scene" />
+        <div class="project-copy">
+          <h3>Thesis — Digital Storytelling + Photovoice</h3>
+          <p>
+            I explored how a comic-style digital storytelling platform can support the Photovoice
+            methodology and deepen reflection on gender-based discrimination among students.
+          </p>
+          <a class="btn ghost small" href="assets/thesis-digital-storytelling-photovoice.pdf" target="_blank" rel="noopener">
+            View the case study
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <img class="project-thumb" src="assets/linkedin-case-study.jpg" alt="LinkedIn application flow mockups" />
+        <div class="project-copy">
+          <h3>Case Study — Improving How Users Apply & Succeed on LinkedIn</h3>
+          <p>
+            A UX case study focused on streamlining the job-application journey, clarifying guidance,
+            and surfacing actionable feedback so applicants can apply with confidence and improve outcomes.
+          </p>
+          <a class="btn ghost small" href="assets/linkedin-apply-success-case-study.pdf" target="_blank" rel="noopener">
+            View the case study
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact" class="contact contact-inline">
-  <div class="contact-text">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-  </div>
+    <div class="contact-text">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    </div>
+    <img class="contact-plane" src="assets/paper-plane-pen-v2.png" alt="" />
+  </section>
 
-  <img class="contact-plane" src="assets/jet2.png" alt="">
-</section>
-
-
-
-
-  <footer>
-    <p>© 2025 Darius. All rights reserved.</p>
+  <footer class="site-footer">
+    <p>© 2025 Darius</p>
   </footer>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
