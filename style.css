@@ -1,41 +1,56 @@
-/* ---------- Base & layout ---------- */
-*{ box-sizing: border-box; margin: 0; padding: 0; }
+/* ========== Base & Layout ========== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root{
   --page-x: clamp(16px, 3vw, 36px); /* horizontal padding for all sections */
-  --content-max: 1200px;            /* shared content width */
+  --content-max: 1200px;            /* shared max width */
 }
 
 body{
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: #f4f4f9;
-  color: #333;
+  background:#f4f4f9;
+  color:#333;
 }
 
-/* Align these sections exactly the same left/right */
-.navbar-inner, .hero, .projects, .contact, .site-footer{
+/* Every main section aligns to the same edges */
+.hero, .projects{
   max-width: var(--content-max);
   margin-inline: auto;
   padding-inline: var(--page-x);
 }
 
-/* ---------- Navbar ---------- */
-.navbar{ background:#000; position: sticky; top:0; z-index: 10; }
-.navbar-inner{
-  display:flex; justify-content:space-between; align-items:center;
-  padding-block: 14px;
+
+
+
+
+/* ========== Navbar (containered bar) ========== */
+.navbar{
+  position: sticky; top: 0; z-index: 10;
+  background: transparent;
 }
-.logo img{ height:34px; display:block; }
-.header-actions{ display:flex; align-items:center; gap:14px; }
-.icon-link{ display:inline-flex; align-items:center; color:#fff; }
-.icon-link svg{ color:#fff; opacity:.85; transition:opacity .15s, transform .15s; }
+.navbar-inner{
+  max-width: var(--content-max);
+  margin: 8px auto;
+  padding: 12px var(--page-x);
+  background:#000;
+  border-radius: 10px;
+  display:flex; align-items:center; gap:16px;
+}
+.logo img{ height:34px; width:auto; display:block; }
+.header-actions{ margin-left:auto; display:flex; align-items:center; gap:14px; }
+.icon-link{ display:inline-flex; line-height:0; text-decoration:none; }
+.icon-link svg{ color:#fff; opacity:.9; display:block; transition:opacity .15s, transform .15s; }
 .icon-link:hover svg{ opacity:1; transform:translateY(-1px); }
 
-/* ---------- Hero ---------- */
+
+
+
+
+/* ========== Hero ========== */
 .hero{
   display:grid; grid-template-columns: 1fr 1fr; align-items:center; gap:40px;
-  padding-block: 80px 40px;     /* only top/bottom; left/right come from container */
+  padding-block:80px 40px;  /* vertical only; left/right come from container */
   background:#fff;
 }
 .hero-left h1{ font-size: clamp(28px, 4vw, 44px); margin-bottom:14px; }
@@ -43,7 +58,7 @@ body{
 .hero-right{ text-align:right; }
 .hero-right img{ max-width:520px; width:100%; height:auto; }
 
-/* CTA buttons */
+/* Buttons */
 .hero-ctas{ display:flex; gap:12px; flex-wrap:wrap; }
 .btn{
   display:inline-block; padding:10px 16px; border-radius:999px; font-weight:700;
@@ -56,49 +71,152 @@ body{
 .btn.ghost:hover{ background:#000; color:#fff; transform:translateY(-1px); }
 .btn.small{ padding:8px 14px; font-size:.95rem; }
 
-/* ---------- Projects ---------- */
-.projects{ padding-block: 24px 60px; }
-.projects h2{ margin: 40px 0 16px; }
 
+
+
+
+
+/* ========== Projects ============= */
+/* ---- Projects: image-left, text-right (like your reference) ---- */
+
+/* ===== Projects — image left, text right (like your reference) ===== */
+.projects { padding-block: 24px 60px; }
+.projects h2 { margin: 40px 0 16px; }
+
+/* One card per row for this pattern */
 .projects-grid{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(560px, 1fr)); /* wider cards; tweak 560 if needed */
-  gap:24px; align-items:stretch;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
 }
 
+/* Card: two-column grid (media | text) with matching heights */
 .project-card{
-  display:grid; grid-template-columns: 160px 1fr; gap:20px; align-items:center;
-  background:#fff; border:1px solid #e9e9e9; border-radius:16px;
-  padding:24px 28px; box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  display: grid;
+  grid-template-columns: minmax(320px, 0.56fr) 1fr;  /* image ≈56% | text ≈44% */
+  align-items: stretch;                               /* make columns equal height */
+  min-height: 360px;                                  /* comfortable baseline height */
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 18px;
+  overflow: hidden;                                   /* curves the image corners */
+  box-shadow: 0 12px 30px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
+.project-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 44px rgba(0,0,0,.08);
+  border-color: #e5e5e5;
+}
+
+/* Image fills entire card height — no bottom white strip */
 .project-thumb{
-  width:160px; height:120px; object-fit:cover; border-radius:12px; background:#f4f4f4;
+  width: 100%;
+  height: 100%;                                       /* fills the grid row */
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform .25s ease;
 }
-.project-copy h3{ margin:0 0 .4rem; font-size:1.4rem; }
-.project-copy p{ margin:0 0 .6rem; color:#444; line-height:1.6; }
+.project-card:hover .project-thumb{ transform: scale(1.02); }
 
-/* ---------- Contact ---------- */
-.contact.contact-inline{
-  display:flex; align-items:center; justify-content:space-between; gap:24px;
-  padding-block: 24px 60px;
-}
-.contact-plane{
-  flex:0 0 auto; width:220px; max-width:28vw; height:auto; display:block;
-  transform: rotate(-4deg);
+/* Text column */
+.project-copy{
+  padding: clamp(22px, 3vw, 36px);
+  align-self: center;
 }
 
-/* ---------- Footer ---------- */
-.site-footer{ text-align:center; padding-block: 30px; color:#666; }
+/* Kicker (tags) */
+.project-kicker{
+  font-size: .8rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  margin: 0 0 10px;
+}
 
-/* ---------- Responsive ---------- */
-@media (max-width: 1000px){
-  .hero{ grid-template-columns: 1fr; text-align:left; }
+/* Title & body copy */
+.project-copy h3{
+  margin: 0 0 12px;
+  font-size: clamp(24px, 3.2vw, 34px);
+  line-height: 1.2;
+}
+.project-copy p{
+  margin: 0 0 20px;
+  color: #555;
+  line-height: 1.65;
+  font-size: 17px;
+  max-width: 60ch;
+}
+
+/* Button pill to match reference */
+.btn.large{ padding: 12px 22px; font-size: 1rem; border-radius: 999px; }
+
+/* Responsive stack */
+@media (max-width: 900px){
+  .project-card{
+    grid-template-columns: 1fr;       /* image on top, text below */
+    min-height: unset;
+  }
+  .project-thumb{ height: 220px; }    /* controlled height when stacked */
+}
+
+
+
+/* ========== Dark Contact Footer (containerized) ========== */
+.footer{ background: transparent; color:#fff; margin-top: 20px; }
+
+.footer-inner{
+  max-width: var(--content-max);
+  margin: 12px auto;
+  padding: 48px var(--page-x);
+  background:#000; border-radius:12px;
+  display:grid; grid-template-columns: 1.1fr 0.9fr; align-items:center; gap: 32px;
+}
+.footer-text h2{ font-size: clamp(24px, 3vw, 34px); margin-bottom: 8px; }
+.footer-text .muted{ color:#cfcfcf; margin-bottom: 18px; }
+.footer-info{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+.footer-info a{ color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.35); }
+.footer-info a:hover{ border-bottom-color:#fff; }
+
+.footer-plane{ width: 280px; max-width: 32vw; height:auto; display:block; opacity:.9; transform: rotate(-4deg); justify-self:end; }
+
+/* Centered copyright */
+.footer-copy{
+  grid-column: 1 / -1;
+  margin-top: 8px; padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.12);
+  text-align:center; color:#bdbdbd; font-size:.95rem;
+}
+
+/* ========== Responsive ========== */
+@media (max-width:1000px){
+  .hero{ grid-template-columns:1fr; }
   .hero-right{ text-align:center; }
-  .projects-grid{ grid-template-columns: 1fr; }
-  .project-card{ grid-template-columns: 1fr; }
+  .projects-grid{ grid-template-columns:1fr; }
+  .project-card{ grid-template-columns:1fr; }
   .project-thumb{ width:100%; height:180px; }
 }
-@media (max-width: 800px){
-  .contact.contact-inline{ flex-direction:column; align-items:flex-start; }
-  .contact-plane{ width:180px; }
+@media (max-width:900px){
+  .footer-inner{ grid-template-columns: 1fr; }
+  .footer-plane{ justify-self:start; width:200px; }
 }
+
+/* Greeting text next to the logo */
+.nav-greeting{
+  color:#fff;
+  font-weight:600;
+  font-size: clamp(14px, 1.4vw, 16px);
+  margin-left: 12px;              /* space from the logo */
+  white-space: nowrap;            /* keep on one line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: .95;
+}
+.nav-greeting strong{ font-weight:700; }
+
+/* Hide the greeting on very small screens to keep the bar tidy */
+@media (max-width: 560px){
+  .nav-greeting{ display:none; }
+}
+
