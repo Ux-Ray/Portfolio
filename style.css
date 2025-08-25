@@ -260,9 +260,7 @@ footer {
 }
 
 
-/* Layout for the projects list */
-.projects { padding: 0 36px 60px; }
-.projects h2 { margin: 40px 0 16px; }
+
 
 /* Two cards side-by-side */
 .projects-grid {
@@ -435,5 +433,17 @@ header.navbar .menu { display:none; }
 @media (max-width: 800px){
   .contact-inline{ flex-direction:column; align-items:flex-start; }
   .contact-plane{ width:180px; }
+}
+
+:root{
+  --page-x: clamp(16px, 3vw, 36px);   /* horizontal padding */
+  --content-max: 1200px;              /* max width for all sections */
+}
+
+/* make all main sections align the same */
+.hero, .projects, .contact {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--page-x);
 }
 
