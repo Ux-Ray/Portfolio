@@ -64,4 +64,27 @@
     .hero .lead{ font-size: 15px; }
     .hero-meta{ grid-template-columns: 1fr; gap: 20px; }
   }
+
+
+
+
+:root { --hero-copy: 820px; }
+
+/* keep container centered overall */
+.hero .container { max-width: 1120px; margin: 0 auto; }
+
+/* same width, but left aligned */
+.hero .container > h1,
+.hero .container > .lead,
+.hero .hero-media {
+  max-width: var(--hero-copy);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* comfy measure for text */
+.hero .container > h1,
+.hero .container > .lead { max-width: min(var(--hero-copy), 62ch); }
+
+
   
