@@ -1,0 +1,102 @@
+/* Metrics section (images as cards) */
+.s-metrics, .s-metrics * , .s-metrics *::before, .s-metrics *::after { box-sizing: border-box; }
+:root{ --metrics-narrow: 980px; }
+
+.s-metrics{
+  background:#fff;
+  padding:40px 0 28px;
+}
+.s-metrics .container{
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 24px 32px;
+}
+
+/* headings */
+.s-metrics .eyebrow{ color:#1f4ed8; font-weight:700; font-size:18px; margin:0 0 10px; }
+.s-metrics .metrics-title{
+  margin:6px 0 12px; font-weight:800; letter-spacing:-.01em; line-height:1.2;
+  font-size:clamp(26px,3vw,40px); color:#0b0b0b; max-width:1100px;
+}
+.s-metrics .metrics-intro{
+  color:#4b5563; font-size:clamp(15px,1.2vw,18px); line-height:1.7;
+  max-width:1060px; margin:0 0 18px;
+}
+
+/* grid of image cards */
+.s-metrics__narrow{ max-width:var(--metrics-narrow); margin-inline:auto; }
+
+.metrics-cards{
+  display:grid;
+  grid-template-columns: 1fr 1fr;   /* two columns on desktop */
+  gap:18px 22px;
+  align-items:start;                 /* keep top aligned (3 left / 2 right) */
+}
+
+.metrics-cards figure{ margin:0; }
+.metrics-cards img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  border:1px solid #e8eefc;
+  background:#fff;
+  box-shadow:0 16px 36px rgba(31,78,216,.10);
+}
+
+/* mobile: one column */
+@media (max-width:900px){
+  .metrics-cards{ grid-template-columns:1fr; }
+}
+
+:root{
+    --metrics-narrow: 980px;
+    --metrics-card-h: 220px;     /* tweak: 200–260px */
+  }
+  
+  .s-metrics__narrow{ max-width:var(--metrics-narrow); margin-inline:auto; }
+  
+  /* Two equal columns */
+  .metrics-cards{
+    display:grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap:18px 22px;
+    align-items:start;
+  }
+  
+  /* Make each card a same-height frame; center the PNG inside */
+  .metrics-cards figure{
+    margin:0;
+    height: var(--metrics-card-h);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:8px;
+    border-radius:16px;
+    border:1px solid #e8eefc;
+    background:#fff;
+    box-shadow:0 16px 36px rgba(31,78,216,.10);
+  }
+  
+  .metrics-cards img{
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    display:block;
+  }
+  
+  /* Make the 5th card span both columns for a balanced ending */
+  .metrics-cards figure:nth-child(5){
+    grid-column: 1 / -1;
+    justify-self:center;
+    width:min(780px, 100%);
+  }
+  
+  /* Mobile */
+  @media (max-width:900px){
+    .metrics-cards{ grid-template-columns:1fr; }
+    .metrics-cards figure{ height:auto; padding:0; }
+    .metrics-cards figure:nth-child(5){ grid-column:auto; width:100%; }
+  }
+  

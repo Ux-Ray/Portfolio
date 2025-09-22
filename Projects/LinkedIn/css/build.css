@@ -1,0 +1,325 @@
+/* css/build.css
+   Namespaced to .s-build so it can’t interfere with other sections. */
+
+   .s-build, .s-build * , .s-build *::before, .s-build *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Section wrapper */
+  .s-build {
+    background:#fff;
+    padding: 40px 0 28px;
+  }
+  
+  /* Local container (reuses your site .container width) */
+  .s-build .container{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+  
+  /* Eyebrow inherits your global .eyebrow style */
+  .s-build .eyebrow{
+    color:#1f4ed8;
+    font-weight:700;
+    font-size:18px;
+    margin:0 0 10px;
+  }
+  
+  /* Title + intro */
+  .s-build__title{
+    margin:6px 0 12px;
+    font-weight:800;
+    letter-spacing:-0.01em;
+    line-height:1.2;
+    font-size:clamp(26px,3vw,40px);
+    color:#0b0b0b;
+    max-width:1100px;
+  }
+  .s-build__intro{
+    color:#4b5563;
+    font-size:clamp(15px,1.2vw,18px);
+    line-height:1.7;
+    max-width:1060px;
+    margin:0 0 18px;
+  }
+  
+  /* Step header */
+  .s-build__kicker{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:16px 0 12px;
+    font-weight:800;
+    color:#0b0b0b;
+  }
+  .s-build__step{
+    display:inline-flex;
+    align-items:center; justify-content:center;
+    width:28px; height:28px; border-radius:50%;
+    background:#1f4ed8; color:#fff;
+    font:800 14px/1 Inter, system-ui, sans-serif;
+  }
+  
+  /* Two mini-cards grid */
+  .s-build__mini-cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-bottom:18px;
+  }
+  @media (max-width:980px){
+    .s-build__mini-cards{ grid-template-columns:1fr; }
+  }
+  
+  /* Mini-card */
+  .mini-card{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    align-items:flex-start;
+    gap:10px;
+    padding:14px 16px;
+    background:#fff;
+    border:1px solid #e8eefc;
+    border-radius:14px;
+    box-shadow:0 14px 28px rgba(31,78,216,.08);
+    color:#1f2937;
+    text-decoration:none;
+    min-width:0;
+  }
+  .mini-card__icon{
+    width:28px; height:28px;
+    border-radius:8px;
+    display:flex; align-items:center; justify-content:center;
+    background:rgba(31,78,216,.06);
+  }
+  .mini-card__title{
+    margin:0 0 4px;
+    font:800 16px/1.35 Inter, system-ui, sans-serif;
+    color:#153eec;
+  }
+  .mini-card__text{
+    margin:0;
+    font-size:14.8px;
+    line-height:1.6;
+    color:#1f2937;
+  }
+  
+  /* Problem / Solution accents */
+  .mini-card--problem .mini-card__icon{ background:rgba(22,163,74,.10); }
+  .mini-card--problem .mini-card__title{ color:#15803d; }
+  .mini-card--solution .mini-card__icon{ background:rgba(37,99,235,.10); }
+  
+  /* Four screenshots */
+  .s-build__screens{
+    background:#fbfdff;
+    border:1px solid #e8eefc;
+    border-radius:16px;
+    box-shadow:0 16px 36px rgba(31,78,216,.10);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    padding:18px;
+    margin-top:8px;
+  }
+  .s-build__screens img{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:18px;
+    border:1px solid #e8eefc;
+    background:#fff;
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+  }
+  @media (max-width:980px){
+    .s-build__screens{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:640px){
+    .s-build__screens{ grid-template-columns:1fr; }
+  }
+  /* Image cards side-by-side */
+.s-build__cards-images{
+  display:grid;
+  grid-template-columns: 1fr 1fr;  /* two columns */
+  gap:16px;
+  margin: 12px 0 18px;
+}
+
+.s-build__cards-images img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  border:1px solid #e8eefc;
+  background:#fff;
+  box-shadow:0 16px 36px rgba(31,78,216,.10);
+}
+
+/* Stack on mobile */
+@media (max-width: 860px){
+  .s-build__cards-images{ grid-template-columns: 1fr; }
+}
+/* Shared narrow width for image rows (desktop), full width on small screens */
+:root{ --build-narrow: 980px; }  /* tweak to taste: 940–1024px also works */
+
+.s-build__narrow{
+  width: 100%;
+  max-width: var(--build-narrow);
+  margin-inline: auto;   /* centers the block */
+}
+
+/* Two image cards side-by-side */
+.s-build__cards-images{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 12px 0 18px;
+}
+
+.s-build__cards-images img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid #e8eefc;
+  background: #fff;
+  box-shadow: 0 16px 36px rgba(31,78,216,.10);
+}
+
+/* Your 4-up phone gallery (adjust class name if different) */
+.s-build__phones{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Stack gracefully on small screens */
+@media (max-width: 980px){
+  .s-build__cards-images{ grid-template-columns: 1fr; }
+  .s-build__phones{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px){
+  .s-build__phones{ grid-template-columns: 1fr; }
+}
+/* Numbered subhead */
+.s-build__subhead{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin: 28px auto 12px;
+  max-width: var(--build-narrow, 980px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.s-build__step{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px; height:28px;
+  border-radius:999px;
+  font-weight:800;
+  background:#1f4ed8;
+  color:#fff;
+}
+
+/* You already have these, shown here just for clarity
+
+:root{ --build-narrow: 980px; }
+.s-build__narrow{ max-width:var(--build-narrow); margin-inline:auto; }
+.s-build__cards-images{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.s-build__cards-images img{ width:100%; height:auto; border-radius:16px; border:1px solid #e8eefc; box-shadow:0 16px 36px rgba(31,78,216,.10); }
+.s-build__phones{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+@media (max-width:980px){ .s-build__cards-images{ grid-template-columns:1fr; } .s-build__phones{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .s-build__phones{ grid-template-columns:1fr; } }
+*/
+
+/* Row 2 uses 3 columns on desktop to match your layout */
+.s-build__phones--row2{
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width:980px){
+  .s-build__phones--row2{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width:560px){
+  .s-build__phones--row2{ grid-template-columns: 1fr; }
+}
+
+.phone-gallery{
+  --cell-w: clamp(180px, 20vw, 260px);
+  --gap: clamp(16px, 2.5vw, 32px);
+  max-width: 1200px;             /* keep the block from getting too wide */
+  margin: 24px auto 0;           /* center the whole strip */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;       /* center each row */
+  align-items: flex-start;        /* top-align items in a row */
+  gap: var(--gap);                /* same gap for rows and columns */
+}
+
+.phone-gallery figure{
+  width: var(--cell-w);
+  margin: 0;
+}
+
+.phone-gallery img{
+  display: block;                 /* removes inline-image baseline gap */
+  width: 100%;
+  height: auto;
+}
+/* css/build.css */
+.section-build .phone-gallery{
+  max-width: 980px;
+  margin-inline: auto;
+  --cell-w: clamp(160px, 18vw, 220px);
+  --gap: clamp(16px, 2vw, 24px);
+}
+:root { --build-narrow: 980px; }   /* tweak 940–1024px to match your cards */
+
+.s-build__narrow{
+  max-width: var(--build-narrow);
+  margin-inline: auto;             /* center the whole block */
+}
+
+.s-build .phone-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;         /* center each row */
+  align-items: flex-start;
+  gap: clamp(16px, 2vw, 24px);     /* uniform spacing between rows & columns */
+  max-width: var(--build-narrow);  /* same width as cards above */
+  margin: 12px auto 0;
+}
+
+.s-build .phone-gallery figure{
+  width: clamp(160px, 18vw, 220px); /* consistent tile width */
+  margin: 0;
+}
+
+.s-build .phone-gallery img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Closing banner */
+.s-build__cta{
+  background: var(--brand, #1f4ed8);
+  color:#fff;
+  margin-top: 32px;
+}
+
+.s-build__cta .container{
+  max-width: 1120px;   /* matches your site width */
+  margin: 0 auto;
+  padding: 56px 24px;  /* vertical breathing room */
+  text-align: center;
+}
+
+.s-build__cta p{
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  font-size: clamp(20px, 2.6vw, 32px);
+}

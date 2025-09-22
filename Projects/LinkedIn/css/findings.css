@@ -1,0 +1,105 @@
+/* ==========================================================
+   WHAT PEOPLE WERE SAYING (FINDINGS) — HARDENED STYLES
+   Drop this at the end of your main CSS or in css/findings.css
+   ========================================================== */
+
+/* make sure sizing is predictable inside this section */
+.section-findings, .section-findings * , .section-findings *::before, .section-findings *::after{
+    box-sizing: border-box;
+  }
+  
+  /* section spacing */
+  .section-findings{
+    background:#fff;
+    padding:40px 0 24px;
+  }
+  
+  /* headline + intro (scoped so globals can't override) */
+  .section-findings .findings-title{
+    margin:6px 0 18px;
+    font-weight:800;
+    letter-spacing:-0.01em;
+    line-height:1.2;
+    font-size:clamp(26px,3vw,44px);
+    color:#0b0b0b;
+    max-width:1100px;
+  }
+  .section-findings .findings-intro{
+    color:#4b5563;
+    font-size:clamp(15px,1.2vw,18px);
+    line-height:1.7;
+    max-width:1060px;
+    margin:0 0 12px;
+  }
+  
+  /* ---------- GRID ---------- */
+  /* Force a real two-column grid on desktop */
+  .section-findings .findings-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    grid-auto-rows:auto;
+    gap:22px;
+    margin-top:22px;
+    clear:both;            /* defeats any rogue floats above */
+    position:relative;     /* prevents weird stacking contexts */
+  }
+  
+  /* Stack to one column on tablets/phones */
+  @media (max-width:980px){
+    .section-findings .findings-grid{ grid-template-columns:1fr !important; }
+  }
+  
+  /* ---------- CARD ---------- */
+  .section-findings .finding-card{
+    display:grid !important;                 /* ensure grid, not block/float */
+    grid-template-columns:44px 1fr;
+    align-items:start;
+    gap:14px;
+  
+    padding:18px;
+    background:#fff !important;
+    border:1px solid #e8eefc;
+    border-radius:16px;
+    box-shadow:0 18px 50px rgba(31,78,216,.08);
+  
+    color:#1f2937 !important;
+    text-decoration:none !important;
+    float:none !important;                   /* kill any inherited float */
+    position:relative !important;
+    min-width:0;                              /* allow text wrapping */
+  }
+  .section-findings .finding-card *{ min-width:0; }
+  
+  /* icon “chip” */
+  .section-findings .finding-icon{
+    width:44px; height:44px;
+    border-radius:12px;
+    background:rgba(31,78,216,.10);
+    display:flex; align-items:center; justify-content:center;
+    flex:0 0 44px;
+  }
+  .section-findings .finding-icon svg{ display:block; }
+  
+  /* content */
+  .section-findings .finding-title{
+    color:#153eec !important;
+    font-size:18px;
+    font-weight:800;
+    margin:0 0 6px;
+    line-height:1.35;
+  }
+  .section-findings .finding-text{
+    color:#1f2937 !important;
+    font-size:15.5px;
+    line-height:1.65;
+    margin:0;
+  }
+  
+  /* small tweaks on phones */
+  @media (max-width:720px){
+    .section-findings{ padding-top:28px; }
+    .section-findings .finding-card{ border-radius:14px; padding:16px; }
+    .section-findings .finding-title{ font-size:16.5px; }
+    .section-findings .finding-text{ font-size:15px; }
+  }
+  

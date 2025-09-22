@@ -1,0 +1,67 @@
+/* =========================================
+   SECTION — HERO
+   Title, intro paragraph, large mockup image,
+   and the three meta columns
+   ========================================= */
+
+   .hero h1{
+    font-size: clamp(28px, 3.2vw, 36px);
+    line-height: 1.25;
+    color: var(--brand);
+    margin: 24px 0 10px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  
+  .hero .lead{
+    color: var(--muted);
+    font-size: 15.5px;        /* compact but readable */
+    max-width: 960px;
+    margin-bottom: 28px;
+  }
+  
+  .hero-media{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,.12);
+  }
+  .hero-media img{ display:block; width:100%; height:auto; }
+  
+  /* Meta grid (Methods / Role+Duration / Mentor+Date) */
+  .hero-meta{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr; /* Methods a bit wider */
+    gap: 60px;
+    max-width: 720px;
+    margin: 28px auto 0;                 /* center the grid */
+    justify-content: center;
+  }
+  
+  .meta-block h3{
+    color: var(--brand);
+    font-size: 15px;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .meta-block p,
+  .meta-block li,
+  .meta-block .kv{
+    font-size: 14.5px;
+    color: var(--text);
+    margin: 0;
+  }
+  .meta-block ul{ list-style: disc; padding-left: 18px; margin: 0; }
+  .kv{ display:block; line-height:1.7; }
+  
+  /* Responsive */
+  @media (max-width: 960px){
+    .hero-meta{ grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 720px){
+    .container{ padding: 20px 18px 48px; }
+    .hero .lead{ font-size: 15px; }
+    .hero-meta{ grid-template-columns: 1fr; gap: 20px; }
+  }
+  
