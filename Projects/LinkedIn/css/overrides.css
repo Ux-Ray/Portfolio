@@ -1,0 +1,59 @@
+/* ===== Spacing scale ===== */
+:root{
+  --s-0: 0;
+  --s-4: 4px;
+  --s-8: 8px;
+  --s-12: 12px;
+  --s-16: 16px;
+  --s-24: 24px;
+  --s-32: 32px;
+  --s-48: 48px;
+  --s-64: 64px;
+  --s-96: 96px;
+}
+
+/* Margin utilities */
+.mt-8{  margin-top:var(--s-8);}
+.mt-12{ margin-top:var(--s-12);}
+.mt-16{ margin-top:var(--s-16);}
+.mt-24{ margin-top:var(--s-24);}
+.mt-32{ margin-top:var(--s-32);}
+.mt-48{ margin-top:var(--s-48);}
+.mt-64{ margin-top:var(--s-64);}
+.mt-96{ margin-top:var(--s-96);}
+
+.mb-8{  margin-bottom:var(--s-8);}
+.mb-12{ margin-bottom:var(--s-12);}
+.mb-16{ margin-bottom:var(--s-16);}
+.mb-24{ margin-bottom:var(--s-24);}
+.mb-32{ margin-bottom:var(--s-32);}
+.mb-48{ margin-bottom:var(--s-48);}
+.mb-64{ margin-bottom:var(--s-64);}
+.mb-96{ margin-bottom:var(--s-96);}
+
+/* Y-axis (top+bottom) */
+.my-16{ margin-block:var(--s-16);}
+.my-24{ margin-block:var(--s-24);}
+.my-32{ margin-block:var(--s-32);}
+.my-48{ margin-block:var(--s-48);}
+.my-64{ margin-block:var(--s-64);}
+
+/* Padding utilities (when margin collapse is an issue) */
+.pt-24{ padding-top:var(--s-24);} .pb-24{ padding-bottom:var(--s-24);}
+.pt-32{ padding-top:var(--s-32);} .pb-32{ padding-bottom:var(--s-32);}
+.py-24{ padding-block:var(--s-24);} .py-32{ padding-block:var(--s-32);}
+
+/* “Stack” = consistent vertical gap between children */
+.stack{ display:flex; flex-direction:column; gap:var(--s-16); }
+.stack-24{ gap:var(--s-24); }
+.stack-32{ gap:var(--s-32); }
+.stack-48{ gap:var(--s-48); }
+
+/* Optional spacer element (drop <div class="spacer-32"></div>) */
+.spacer-16{ height:var(--s-16); }
+.spacer-24{ height:var(--s-24); }
+.spacer-32{ height:var(--s-32); }
+.spacer-48{ height:var(--s-48); }
+
+/* Shadow-host for your findings block (so it can be spaced too) */
+#findings-app{ display:block; }

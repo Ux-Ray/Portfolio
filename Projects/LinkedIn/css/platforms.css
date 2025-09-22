@@ -1,0 +1,76 @@
+/* ==============================
+   What Other Platforms Get Right
+   css/platforms.css  (scoped)
+   ============================== */
+
+/* Section wrapper + container (same rhythm as other sections) */
+.section-platforms{
+    background:#fff;
+    padding:40px 0 28px;
+  }
+  .section-platforms .container{
+    max-width: 1120px;       /* feel free to set 1040px or 960px if you want it tighter */
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  /* Eyebrow */
+  .section-platforms .eyebrow{
+    color:#1f4ed8;
+    font-weight:700;
+    font-size:18px;
+    margin:0 0 10px;
+  }
+  
+  /* Headline */
+  .section-platforms .platforms-title{
+    margin:6px 0 12px;
+    font-weight:800;
+    letter-spacing:-0.01em;
+    line-height:1.2;
+    font-size:clamp(26px,3vw,40px);
+    color:#0b0b0b;
+    max-width:1100px;
+  }
+  
+  /* Intro paragraphs */
+  .section-platforms .platforms-intro{
+    color:#4b5563;
+    font-size:clamp(15px,1.2vw,18px);
+    line-height:1.7;
+    max-width:1060px;
+    margin:0 0 18px;
+  }
+  
+  /* Poster image */
+  .section-platforms .platforms-poster{
+    margin: 18px 0 0;
+    /* optional soft card feel around the poster */
+    background:#fff;
+    border:1px solid #e8eefc;
+    border-radius:16px;
+    box-shadow:0 16px 36px rgba(31,78,216,.10);
+    overflow:hidden;                     /* keeps image corners rounded */
+  }
+  .section-platforms .platforms-poster img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  
+  /* Narrower look on small screens */
+  @media (max-width:720px){
+    .section-platforms .platforms-poster{ border-radius:14px; }
+  }
+  /* Make the comparison poster narrower on wide screens */
+.section-platforms .platforms-poster{
+    /* pick your max — 880–980px usually looks great */
+    width: min(920px, 100%);
+    margin: 18px auto 0;     /* center it */
+  }
+  
+  /* Optional: a bit tighter on very large desktops */
+  @media (min-width: 1400px){
+    .section-platforms .platforms-poster{ width: min(880px, 100%); }
+  }
+  

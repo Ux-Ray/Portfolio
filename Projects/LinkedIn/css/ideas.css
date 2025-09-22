@@ -1,0 +1,70 @@
+/* ==============================
+   Ideas That Mattered Most
+   css/ideas.css
+   ============================== */
+
+/* Section wrapper */
+.section-ideas{
+    background:#fff;
+    padding:40px 0 28px;
+  }
+  
+  /* Use the same container sizing you’ve been using */
+  .section-ideas .container{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+  
+  /* Eyebrow—reuses your brand blue */
+  .section-ideas .eyebrow{
+    color:#1f4ed8;
+    font-weight:700;
+    font-size:18px;
+    margin:0 0 10px;
+  }
+  
+  /* Title */
+  .section-ideas .ideas-title{
+    margin:6px 0 12px;
+    font-weight:800;
+    letter-spacing:-.01em;
+    line-height:1.2;
+    font-size:clamp(26px,3vw,40px);
+    color:#0b0b0b;
+    max-width:1100px;
+  }
+  
+  /* Intro copy */
+  .section-ideas .ideas-intro{
+    color:#4b5563;
+    font-size:clamp(15px,1.2vw,18px);
+    line-height:1.7;
+    max-width:1060px;
+    margin:0 0 16px;
+  }
+  
+  /* Poster card — narrower than full container */
+  .section-ideas .ideas-poster{
+    /* pick the width you like; 860–940px usually feels “a bit narrower” */
+    width:min(900px, 100%);
+    margin:18px auto 0;     /* center under the text */
+    border:1px solid #e8eefc;
+    border-radius:16px;
+    box-shadow:0 16px 36px rgba(31,78,216,.10);
+    overflow:hidden;        /* keep corners crisp */
+    background:#fff;
+  }
+  
+  /* Make the image fill the poster card */
+  .section-ideas .ideas-poster img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  
+  /* Optional: gently tighten on very large monitors */
+  @media (min-width:1400px){
+    .section-ideas .ideas-poster{ width:min(880px, 100%); }
+  }
+  

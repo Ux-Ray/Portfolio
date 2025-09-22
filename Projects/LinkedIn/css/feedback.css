@@ -1,0 +1,66 @@
+/* ==============================
+   User feedback section
+   css/feedback.css (scoped)
+   ============================== */
+   :root{
+    /* Tweak width of the big poster on desktop */
+    --feedback-poster-max: 980px;
+  }
+  
+  .section-feedback{
+    background:#fff;
+    padding:40px 0 28px;
+  }
+  .section-feedback .container{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+  
+  /* Eyebrow (kept consistent with the site) */
+  .section-feedback .eyebrow{
+    color:#1f4ed8;
+    font-weight:700;
+    font-size:18px;
+    margin:0 0 10px;
+  }
+  
+  /* Title + intro */
+  .section-feedback .feedback-title{
+    margin:6px 0 10px;
+    font-weight:800;
+    letter-spacing:-0.01em;
+    line-height:1.2;
+    font-size:clamp(26px,3vw,40px);
+    color:#0b0b0b;
+    max-width:1100px;
+  }
+  .section-feedback .feedback-intro{
+    color:#4b5563;
+    font-size:clamp(15px,1.2vw,18px);
+    line-height:1.7;
+    max-width:1060px;
+    margin:0 0 18px;
+  }
+  
+  /* Poster */
+  .section-feedback .feedback-poster{
+    margin:16px auto 0;
+    max-width:var(--feedback-poster-max);
+    border:1px solid #e8eefc;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 18px 40px rgba(31,78,216,.10);
+    overflow:hidden;         /* keeps image corners rounded */
+  }
+  .section-feedback .feedback-poster img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  
+  /* Small tweaks for mobile */
+  @media (max-width:720px){
+    .section-feedback .feedback-poster{ border-radius:14px; }
+  }
+  
