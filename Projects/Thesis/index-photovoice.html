@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Thesis Case Study — Digital Storytelling & Photovoice</title>
+
+  <style>
+    /* Base */
+    body{
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin:0; padding:0;
+      background:#f8f9fa; color:#222;
+    }
+    header{ background:#111; color:#fff; padding:1rem 2rem; }
+    header a{ color:#72e5c2; text-decoration:none; }
+
+    /* Main container */
+    main{
+      max-width: min(1400px, 98vw);
+      margin: 3rem auto;
+      background:#fff;
+      padding: clamp(24px, 5vw, 56px);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    }
+
+    h1,h2{ color:#111; margin:0 0 .75rem; }
+    h1{ text-align:center; margin-bottom: 1.25rem; }
+    .h1v2{text-align:left; margin-bottom: 1.25rem;}text
+    .center { text-align:center; }
+
+    figure{ margin-block: clamp(24px, 5vw, 72px); }
+    figure img{ max-width:100%; height:auto; border-radius:8px; display:block; }
+
+    /* hero image cap */
+    .summary-hero img{ width: min(100%, 700px); margin-inline:auto; }
+
+    .quote{
+      border-left:4px solid #72e5c2;
+      padding-left:1rem; margin:1rem 0; font-style:italic;
+    }
+    .btn{
+      display:inline-block; background:#72e5c2; color:#111;
+      padding:.6rem 1.2rem; border-radius:6px; text-decoration:none; font-weight:bold;
+    }
+    footer{ text-align:center; margin: 1.5rem 0 0; color:#555; }
+
+    /* Role / Tools grid */
+    .role-tools{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: clamp(16px, 6vw, 64px);
+      row-gap: 1rem;
+      margin-top: 1rem;
+      align-items:start;
+      --indent: 1.25rem;
+      margin-bottom: clamp(32px, 6vw, 96px);
+    }
+    .role-tools h3{ margin:0 0 .5rem; padding-left:var(--indent); text-align:left; }
+    .role-tools ul{ list-style:disc; padding-left:var(--indent); margin:0; }
+    .role-tools li{ margin:.45rem 0; }
+    .role-tools li::marker{ color:#72e5c2; }
+    @media (max-width:800px){ .role-tools{ grid-template-columns:1fr; } }
+
+    /* Role rows + scribble divider */
+    .rs-row{ display:flex; gap:14px; align-items:flex-start; margin:12px 0 10px; }
+    .rs-icon{ width:48px; height:48px; flex:0 0 48px; object-fit:contain; display:block; }
+    .rs-text p{ margin:0 0 .4rem; line-height:1.6; }
+    .scribble{ width:100%; height:14px; opacity:.7; margin: 12px 0 clamp(48px, 6vw, 96px); }
+
+    /* Infographic helpers */
+    .infographic{ width: min(100%, 720px); display:block; margin:0 auto; height:auto; border-radius:8px; }
+    .infographic-padding{ width:min(100%, 720px); height:auto; display:block; margin-inline:auto; margin-block:32px; }
+
+    /* Co-design block */
+    .case-block{ margin-block: clamp(24px, 5vw, 56px); }
+    .case-block h2{ font-size: clamp(1.6rem, 2.8vw, 2.25rem); margin: 0 0 .5rem; }
+    .case-block .lead{ font-size: clamp(1rem, 1.2vw, 1.15rem); margin: 0 0 1rem; line-height: 1.7; }
+
+    .case-split{ display:grid; grid-template-columns: 1.2fr 1fr; gap: clamp(16px, 3vw, 36px); align-items:start; }
+    @media (max-width: 900px){ .case-split{ grid-template-columns: 1fr; } }
+
+    .case-img{
+      background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:6px;
+      box-shadow:0 2px 10px rgba(0,0,0,.08); margin:0;
+      width:min(100%, 480px); justify-self:start;
+    }
+    .case-img img{ width:100%; height:auto; display:block; border-radius:4px; }
+
+    .case-side h3{ margin:0 0 .5rem; }
+    .case-side ul{ margin:0; padding-left:1.25rem; }
+    .case-side li{ margin:.55rem 0; line-height:1.6; }
+
+    /* Charts pair */
+    .chart-pair{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(12px, 3vw, 36px);
+      align-items:start;
+      margin-block: clamp(16px, 4vw, 40px);
+    }
+    .chart{ max-width: clamp(320px, 42vw, 480px); margin:0; text-align:center; }
+    .chart img{ width:100%; height:auto; display:block; border-radius:4px; }
+    .chart figcaption{ margin-top:.6rem; font-size:.95rem; line-height:1.5; color:#444; }
+    @media (min-width:1100px){ .chart{ max-width:640px; } .chart-pair{ justify-content:center; } }
+    @media (max-width:800px){ .chart-pair{ grid-template-columns:1fr; } }
+
+    /* Reflection card */
+    .reflect-box{
+      position: relative;
+      background: #fff;
+      border: 2px solid #111;
+      border-radius: 16px;
+      padding: clamp(18px, 3vw, 36px);
+      margin: clamp(24px, 5vw, 64px) 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .reflect-box::before{
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 8px;
+      background: #72e5c2;
+      border-top-left-radius: 14px;
+      border-bottom-left-radius: 14px;
+    }
+    .reflect-title{
+      margin: 0 0 .75rem;
+      font-weight: 800;
+      font-size: clamp(1.4rem, 2.6vw, 2rem);
+      color: #111;
+    }
+    .reflect-box p{ margin: .5rem 0; line-height: 1.8; font-size: clamp(1rem, 1.05vw, 1.125rem); }
+    
+/* Bigger body copy site-wide */
+main p,
+main li{
+  font-size: clamp(1.2rem, 1.6vw, 1.35rem); /* ~19–22px on desktop */
+  line-height: 1.85;
+}
+
+/* (optional) slightly larger captions & quotes too */
+.chart figcaption,
+.quote{ font-size: clamp(1.05rem, 1.2vw, 1.15rem); }
+
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="../index.html">← Back to Portfolio</a>
+  </header>
+
+  <main>
+    <h1>Exploring the Power of Comics in Photovoice: Evaluating a Digital Storytelling Tool to Reflect on Gender Discrimination</h1>
+
+    <p>
+      <strong>A qualitative and quantitative</strong> thesis project exploring how a comic-based
+      platform (<em>Communics</em>) could complement the Photovoice methodology by enhancing
+      creative expression and user engagement during sensitive reflections on discrimination.
+    </p>
+
+    <figure class="summary-hero">
+      <img src="../assets/thesisPic/photovoicee.png" alt="Photovoice + comic-based platform example" loading="lazy">
+    </figure>
+
+    <div class="role-tools">
+      <div>
+        <h3>My Role</h3>
+        <ul>
+          <li>Research Analyst</li>
+          <li>UI designer</li>
+          <li>UX researcher</li>
+          <li>Coordinator &amp; data analyst</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tools</h3>
+        <ul>
+          <li>Figma</li>
+          <li>GitHub</li>
+          <li>Vue.js</li>
+          <li>HTML/CSS</li>
+          <li>R (statistical computing)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Methods</h3>
+        <ul>
+          <li>Creativity Support Index (CSI)</li>
+          <li>UMUX-LITE (usability)</li>
+          <li>Within-subjects design</li>
+          <li>Thematic analysis (open-ended)</li>
+          <li>Facilitated focus group</li>
+        </ul>
+      </div>
+      
+    </div>
+
+    <h1 class="h1v2" >When photos weren’t enough: exploring comics to support expression in Photovoice</h1>
+    <p>
+      Photovoice is a participatory method that uses photography and discussion to explore social issues. This study
+      investigated how comic-based digital storytelling could expand its expressive potential, particularly for sensitive topics
+      such as gender-based discrimination among university students. The approach was evaluated through questionnaires,
+      a focus group, and usability enhancements to the Communics platform.
+    </p>
+    <figure class="steps">
+      <img src="../assets/thesisPic/photovoice%20steps.png" alt="Photovoice steps" loading="lazy">
+    </figure>
+
+    
+
+    <h1 class="h1v2" >What if photography limits what can’t be seen or safely shown?</h1>
+    <div class="lit-limitations">
+      <p><strong>Through a literature review, I identified several limitations of traditional Photovoice:</strong></p>
+      <ul>
+        <li>Participants may avoid taking or sharing certain photos due to <strong>privacy concerns</strong> or risk of exposure.</li>
+        <li>The method introduces <strong>selection bias</strong>, favouring images of subjects that are easier to capture while underrepresenting complex or abstract issues.</li>
+        <li>Emotionally complex or <strong>abstract or verbal experiences</strong> are difficult to represent visually through photography alone.</li>
+      </ul>
+    </div>
+
+    <figure class="steps">
+      <img src="../assets/thesisPic/Limitations.png" alt="Photovoice limitations" loading="lazy">
+    </figure>
+
+    <p>
+      These observations raised key questions that shaped the starting point of my study, prompting me to evaluate the
+      potential of Communics, both for enhancing individual and collaborative expression and to explore the value of
+      integrating new features such as AI
+    </p>
+    <figure class="steps">
+      <img src="../assets/thesisPic/questions.png" alt="Research questions" loading="lazy">
+    </figure>
+
+    <div class="rs-row">
+      <img class="rs-icon" src="../assets/thesisPic/iconRole.png" alt="">
+      <div class="rs-text">
+        <p><strong>Role and Skills:</strong> Research Analyst — Literature review, critical analysis, ethical awareness, translation into design requirements.</p>
+        <p><strong>Tools:</strong> Mendeley, Google Scholar</p>
+      </div>
+    </div>
+
+    <svg class="scribble" viewBox="0 0 600 14" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,9 C60,3 120,3 180,9 S300,15 360,9 S480,3 540,9 S600,15 660,9"
+            fill="none" stroke="#bdbdbd" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
+    <h1 class="h1v2" >When photography fell short, storytelling stepped in</h1>
+    <p>
+      To address key limitations of Photovoice, I explored an existing platform called Communics, a comic-based storytelling
+      tool. With the help of the platform’s programmer, I co-designed lightweight improvements and tested them in a within
+      subject study, in which participants engaged in both traditional Photovoice and Communics-based storytelling. Usability
+      and creativity support were assessed using CSI, UMUX-LITE, and qualitative interviews. Participants were also invited to a
+      focus group, where a Photovoice expert facilitated the session.
+    </p>
+
+    <figure class="infographic infographic-padding">
+      <img src="../assets/thesisPic/infographic.png" alt="Study infographic" loading="lazy">
+    </figure>
+
+    <div class="rs-row">
+      <img class="rs-icon" src="../assets/thesisPic/iconRole.png" alt="">
+      <div class="rs-text">
+        <p><strong>UI Designer & UX Researcher</strong> — Co-design of lightweight platform improvements, usability testing, study design (within-subjects).</p>
+        <p><strong>Tools:</strong> Figma, GitHub, Vue, HTML/CSS</p>
+      </div>
+    </div>
+
+    <svg class="scribble" viewBox="0 0 600 14" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,9 C60,3 120,3 180,9 S300,15 360,9 S480,3 540,9 S600,15 660,9"
+            fill="none" stroke="#bdbdbd" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
+    <h1 class="h1v2" >How comics made individual self-expression and co-design solutions easier in Photovoice</h1>
+    <p>
+      Recruiting participants for this study was not straightforward. The multi-phase design required repeated commitments,
+      the timing overlapped with students’ exam period, and the sensitivity of the topic added another layer of difficulty.
+      Despite these obstacles, a total of 12 participants engaged in the study, contributing across its different phases.
+    </p>
+
+    <h2>1. Individual Task – Evaluating Communics</h2>
+    <p>
+      Quantitative data were analysed in R. The evaluation indicated that Communics can support Photovoice by offering a
+      more accessible, flexible, and emotionally safe form of self-expression. The platform achieved a mean Creativity Support
+      Index (CSI) score of 72, reflecting strong support for creativity, and a UMUX-LITE usability score above the benchmark,
+      suggesting good overall usability.
+    </p>
+
+    <figure class="infographic infographic-padding">
+      <img src="../assets/thesisPic/csicomparison.png" alt="CSI comparison" loading="lazy">
+    </figure>
+
+    <p>
+      Open-ended questions were analysed thematically. Based on participants’ responses, comic-based storytelling was
+      perceived as more creative, efficient, and less intimidating than photography, especially for abstract or emotional
+      topics. The step-by-step flow reduced decision fatigue, while the AI assistant provided participants with greater freedom
+      in how they presented their stories.
+    </p>
+
+    <figure>
+      <img src="../assets/thesisPic/ppl.png" alt="Participants creating stories" loading="lazy">
+    </figure>
+
+    <!-- Group work / co-designing -->
+    <h2> 2. Group work task: co-designing solutions with Communics</h2>
+    <p class="lead">
+      Organizing the focus group required multiple reschedulings due to participant drop-outs
+      and the facilitator’s cancellation; eventually, 8 students were able to participate.
+    </p>
+    <div class="case-block" id="group-work">
+      
+
+      <div class="case-split">
+        <figure class="case-img">
+          <img src="../assets/thesisPic/Real.png" alt="Students participating in a Communics group work session">
+        </figure>
+
+        <div class="case-side">
+          <h3><strong>Results / Achievements:</strong></h3>
+          <ul>
+            <li><strong>Inspired Ideas:</strong> Group storytelling sparked richer concepts and deeper discussions.</li>
+            <li><strong>Design Opportunities:</strong> Feedback highlighted the need for improved usability, customization, and real-time collaboration.</li>
+            <li><strong>Clarity Advantage:</strong> Communics visuals were rated significantly clearer and more effective than traditional photographs during discussion (<em>p = .031</em>).</li>
+            <li><strong>AI Potential:</strong> Participants showed strong interest in AI-generated suggestions (e.g., dialogue or visuals) to lower creative barriers while keeping the reflective process user-driven.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-pair">
+      <figure class="chart">
+        <img src="../assets/thesisPic/engagement%20no%20bg.png"
+             alt="Engagement: Storytelling vs discussion-based problem solving (histogram)">
+        <figcaption>
+          Distribution of participant engagement ratings comparing Communics-driven Photovoice
+          with traditional discussion-based problem-solving.
+        </figcaption>
+      </figure>
+
+      <figure class="chart">
+        <img src="../assets/thesisPic/chart-effectiveness-noBG.png"
+             alt="Perceived collaborative effectiveness (histogram)">
+        <figcaption>
+          Distribution of participant ratings for the platform’s effectiveness in enabling
+          collaborative storytelling.
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="rs-row">
+      <img class="rs-icon" src="../assets/thesisPic/iconRole.png" alt="">
+      <div class="rs-text">
+        <p><strong>Role:</strong> Coordinator &amp; Data Analyst — Participant recruitment and session organization, quantitative
+          analysis (R), qualitative thematic analysis of open-ended responses, synthesis of findings.</p>
+        <p><strong>Tools:</strong> R, Google Forms, Excel</p>
+      </div>
+    </div>
+
+    <svg class="scribble" viewBox="0 0 600 14" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,9 C60,3 120,3 180,9 S300,15 360,9 S480,3 540,9 S600,15 660,9"
+            fill="none" stroke="#bdbdbd" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
+    <div class="reflect-box">
+      <h2 class="reflect-title">What this project taught me</h2>
+      <p>Working on this project taught me that designing for sensitive social issues is not only about usability, but also about emotional safety and inclusivity. I realized that traditional methods like Photovoice can unintentionally exclude participants, and that digital storytelling tools can lower these barriers while still enabling meaningful reflection.</p>
+      <p>I also learned the importance of balancing innovation with user needs: while participants were excited about AI support, their feedback reminded me that technology should empower users rather than replace their voices.</p>
+      <p>Finally, this project showed me how crucial it is to translate user struggles into design opportunities. Every usability challenge or hesitation was a chance to rethink the platform and create a more supportive environment for expression and collaboration.</p>
+    </div>
+  </main>
+
+  <footer>© 2025 Reyhaaneh Ahmadi — Portfolio</footer>
+</body>
+</html>
