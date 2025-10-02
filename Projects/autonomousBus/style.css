@@ -5,7 +5,7 @@
   --bg:    #FFFFFF;
 
   --fs-header: 24px;        /* 🔵 all section headers (H2) */
-  --fs-body:   16px;        /* body text */
+  --fs-body:   18px;        /* body text */
   --lh-body:   1.65;
 
   --container-max: 1100px;  /* page width */
@@ -416,4 +416,5 @@ body{ font-size:var(--fs-body); line-height:var(--lh-body); }
   object-fit: contain;   /* keep proportions */
   margin: 0 auto 16px;
   display: block;
+
 }
