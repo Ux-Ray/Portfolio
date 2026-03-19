@@ -215,8 +215,8 @@ body{
 }
 .nav-greeting strong{ font-weight:700; }
 
-/* Hide the greeting on very small screens to keep the bar tidy */
+/* Hide the greeting on very small screens to keep the bar tidy 
 @media (max-width: 560px){
   .nav-greeting{ display:none; }
 }
-
+*/
