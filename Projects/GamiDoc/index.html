@@ -4,213 +4,233 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GamiDoc Evaluation Planning Flow</title>
-  <meta name="description" content="A UX case study about designing an evaluation planning workflow for GamiDoc.">
+  <meta name="description" content="UX case study about redesigning GamiDoc around evaluation planning.">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header class="case-nav">
-    <a href="../../index.html" aria-label="Back to portfolio">Back to Portfolio</a>
+    <a href="../../index.html">← Back to Portfolio</a>
   </header>
 
   <main class="case-study">
+
+    <!-- HERO -->
     <section class="hero section">
       <p class="kicker">Case Study</p>
       <h1>GamiDoc Evaluation Planning Flow</h1>
-      <p class="subtitle">Designing a guided workflow to support evaluation planning for gamified systems.</p>
-      <p class="intro">
-        GamiDoc is a web-based tool that supports researchers, educators, and practitioners in designing,
-        documenting, and evaluating gamified systems through guided workflows. Before my work, GamiDoc had
-        two main design phases: an earlier version focused on the gamification design framework and design
-        documentation, and a later UX Archive version focused on UX methods, metrics, and evaluation resources.
+      <p class="subtitle">
+        Redesigning GamiDoc from a resource archive into a guided evaluation planning workflow.
       </p>
 
-      <div class="asset-slot hero-asset" data-src="assets/GamiDoc/hero-evaluation-planning.png">
-        <span>Image placeholder: hero illustration and interface preview</span>
-      </div>
+      <p class="intro">
+        GamiDoc is a web-based tool that supports researchers, educators, and practitioners in designing,
+        documenting, and evaluating gamified systems. My work focused on improving the structure of the tool
+        and designing a guided flow that helps users plan UX evaluations more clearly.
+      </p>
+
+      <figure class="image-block hero-image">
+        <img src="../../assets/GamiDoc/Design%20Focus.png" alt="GamiDoc design focus illustration">
+      </figure>
     </section>
 
+    <!-- PROBLEM -->
     <section class="section">
       <p class="kicker">Problem Statement</p>
       <h2>Users did not know where to start in GamiDoc.</h2>
+
       <p>
-        I was asked to improve GamiDoc based on feedback reported in previous studies. While reviewing the
-        earlier evaluations, I noticed that the problem was not only at a micro level, but at a broader structural
-        level. Although GamiDoc offered useful resources for designing and evaluating gamified systems, users were
-        not clearly guided through a coherent process. This could make it difficult for them to understand where to
-        begin, how the different sections were connected, and how to move from general knowledge to concrete
-        project decisions.
+        While reviewing the previous version of GamiDoc and the feedback collected from earlier studies,
+        I noticed that the problem was not only visual. The tool contained useful resources, but users were
+        not guided through a clear process. As a result, it was difficult to understand how the different
+        sections were connected and how to move from general knowledge to concrete project decisions.
       </p>
 
-      <div class="quote-grid" aria-label="User pain points">
+      <div class="quote-grid">
         <blockquote>I wanted help choosing the right method.</blockquote>
         <blockquote>When I followed links, I lost my progress.</blockquote>
         <blockquote>It feels more like a textbook than a tool.</blockquote>
-        <blockquote>I didn't know where to start.</blockquote>
+        <blockquote>I did not know where to start.</blockquote>
       </div>
     </section>
 
+    <!-- MAIN INSIGHT -->
     <section class="section">
       <p class="kicker">Main Insight</p>
-      <h2>The issue was not only visual, but structural</h2>
+      <h2>The issue was not only visual, but structural.</h2>
+
       <p>
-        The problem was not only visual, but structural. I redesigned GamiDoc's information architecture to move
-        it from a feature/archive-centered system to a project-oriented workflow.
+        I redesigned GamiDoc’s information architecture to move it from a feature-centered and archive-centered
+        structure to a more project-oriented workflow. This helped position evaluation planning as part of the
+        user’s project lifecycle rather than as a separate reading section.
       </p>
-      <p>This change helped because it:</p>
+
       <ul>
-        <li>made the system easier to understand and navigate;</li>
-        <li>organized new features within a clearer structure;</li>
-        <li>turned evaluation planning into a dedicated workflow;</li>
-        <li>let users manage multiple projects and return to the right phase later.</li>
+        <li>Made the system easier to understand and navigate.</li>
+        <li>Organized new features within a clearer structure.</li>
+        <li>Turned evaluation planning into a dedicated workflow.</li>
+        <li>Allowed users to return to the right phase of their project later.</li>
       </ul>
 
-      <div class="asset-slot large">
-  <img src="../../assets/GamiDoc/IA.png" alt="GamiDoc information architecture">
-</div>
+      <figure class="image-block medium-image">
+        <img src="../../assets/GamiDoc/IA.png" alt="GamiDoc information architecture">
+        <figcaption>
+          Reframing GamiDoc around projects helped connect design, documentation, and evaluation planning.
+        </figcaption>
+      </figure>
     </section>
 
+    <!-- DESIGN FOCUS -->
     <section class="section">
       <p class="kicker">Design Focus</p>
-      <h2>From Structural Redesign to Evaluation Planning</h2>
+      <h2>From structural redesign to evaluation planning</h2>
+
       <p>
-        After presenting the new information architecture, the ideas were well received by the team. However,
-        because GamiDoc is a large system and my internship time was limited, I narrowed the scope to one concrete
-        feature: Evaluation Planning. I translated it from research, using it to move project information into a
-        live foundation.
+        After presenting the new information architecture, the ideas were well received by the team.
+        However, because GamiDoc is a large system and the internship time was limited, I narrowed the scope
+        to one concrete feature: Evaluation Planning.
       </p>
 
-      <h3>Why this focus?</h3>
-      <ul>
-        <li>Addressed a key gap in the previous system.</li>
-        <li>Connected directly to the user's project workflow.</li>
-        <li>Turned UX knowledge into step-by-step guidance.</li>
-        <li>Was feasible to prototype and test during the internship.</li>
-      </ul>
+      <div class="two-column">
+        <div>
+          <h3>Why this focus?</h3>
+          <ul>
+            <li>It addressed a key gap in the previous system.</li>
+            <li>It connected directly to the user’s project workflow.</li>
+            <li>It turned UX knowledge into step-by-step guidance.</li>
+            <li>It was feasible to prototype and test during the internship.</li>
+          </ul>
+        </div>
 
-      <div class="asset-slot" data-src="../../assets/GamiDoc/project-workflow-sketch.png">
-        <span>Image placeholder: project workflow sketch</span>
+        <figure class="image-block small-image">
+          <img src="../../assets/GamiDoc/Design%20Focus.png" alt="Evaluation planning design focus">
+        </figure>
       </div>
-      <p class="caption">
-        The concept file links user project information, evaluation planning, the method selector,
-        survey repository, and evaluation plan generation.
-      </p>
     </section>
 
+    <!-- FEATURE DESIGN -->
     <section class="section">
       <p class="kicker">Feature Design</p>
       <h2>Designing the Evaluation Planning Flow</h2>
+
       <p>
-        After narrowing the scope, I designed Evaluation Planning as a step-by-step flow inside the user's project.
-        The goal was to turn UX evaluation knowledge from the archive into a practical decision-making process.
-        Instead of only reading about methods and questionnaires, users would be guided through key choices such
-        as their evaluation goals, project stage, constraints, and suitable methods or instruments.
+        I designed Evaluation Planning as a step-by-step flow inside the user’s project. Instead of only
+        reading about methods and questionnaires, users are guided through key choices such as their evaluation
+        goals, project stage, constraints, and suitable methods or instruments.
       </p>
 
-      <div class="asset-slot wide" data-src="../../assets/GamiDoc/evaluation-planning-flow.png">
-        <span>Image placeholder: evaluation planning flow diagram</span>
-      </div>
-      <p class="caption">
-        The Evaluation Planning flow was designed to turn scattered UX knowledge into a guided decision-making process.
-      </p>
+      <figure class="image-block medium-image">
+        <img src="../../assets/GamiDoc/Feature%20Design.png" alt="Evaluation planning feature design">
+        <figcaption>
+          The flow turns scattered UX knowledge into a practical decision-making process.
+        </figcaption>
+      </figure>
     </section>
 
-    <section class="section prototype-section">
+    <!-- PROTOTYPE -->
+    <section class="section">
       <p class="kicker">Prototype Design</p>
-      <h2>From Flow to Interactive Prototype</h2>
+      <h2>From flow to interactive prototype</h2>
+
       <p>
-        After defining the flow, I translated it into wireframes and then into a high-fidelity prototype. The prototype
-        was designed to feel guided but still flexible: users could follow the recommended path, browse all available
-        methods, or manually select what best matched their project. It helped users define their evaluation setup,
-        choose methods and instruments, and generate a final evaluation plan.
+        After defining the flow, I translated it into wireframes and then into a high-fidelity prototype.
+        The prototype was designed to feel guided but still flexible: users could follow the recommended path,
+        browse available methods, or manually select what best matched their project.
       </p>
 
-      <div class="asset-slot screen" data-src="../../assets/GamiDoc/prototype-evaluation-group.png">
-        <span>Image placeholder: evaluation group screen</span>
-      </div>
-      <p class="caption"><strong>Evaluation group:</strong> users define measures, goals, project stage, constraints, and optional research questions.</p>
+      <div class="prototype-grid">
+        <figure class="image-block screen-image">
+          <img src="../../assets/GamiDoc/Step1.png" alt="Evaluation setup step">
+          <figcaption>
+            <strong>Step 1:</strong> users define evaluation goals, project stage, constraints, and optional research questions.
+          </figcaption>
+        </figure>
 
-      <div class="asset-slot screen" data-src="../../assets/GamiDoc/prototype-method-selection.png">
-        <span>Image placeholder: method selection screen</span>
-      </div>
-      <p class="caption"><strong>Method selection:</strong> the system suggests suitable methods based on the previous choices, but users can also browse all methods manually.</p>
+        <figure class="image-block screen-image">
+          <img src="../../assets/GamiDoc/Step2.png" alt="Method selection step">
+          <figcaption>
+            <strong>Step 2:</strong> the system suggests suitable methods based on the previous choices.
+          </figcaption>
+        </figure>
 
-      <div class="asset-slot screen" data-src="../../assets/GamiDoc/prototype-instrument-selection.png">
-        <span>Image placeholder: instrument selection screen</span>
+        <figure class="image-block screen-image">
+          <img src="../../assets/GamiDoc/Step3.png" alt="Instrument selection step">
+          <figcaption>
+            <strong>Step 3:</strong> users choose suitable questionnaires or instruments for their evaluation.
+          </figcaption>
+        </figure>
       </div>
-      <p class="caption"><strong>Instrument selection:</strong> users select surveys or questionnaires; the system recommends suitable instruments.</p>
-
-      <div class="asset-slot screen" data-src="../../assets/GamiDoc/prototype-evaluation-summary.png">
-        <span>Image placeholder: evaluation plan summary screen</span>
-      </div>
-      <p class="caption"><strong>Evaluation plan summary:</strong> the final output summarizes the user's choices and can become a shareable evaluation plan.</p>
     </section>
 
+    <!-- DESIGN DECISIONS -->
     <section class="section">
       <p class="kicker">Design Decisions</p>
-      <h2>Key Decisions Behind the Prototype</h2>
-      <p>To make the Evaluation Planning flow useful in practice, I focused on four design decisions:</p>
+      <h2>Key decisions behind the prototype</h2>
+
+      <p>
+        To make the Evaluation Planning flow useful in practice, I focused on guidance, flexibility, and a concrete
+        final output. The goal was not only to show information, but to help users make better evaluation decisions.
+      </p>
+
       <ul>
-        <li><strong>Step-by-step guidance:</strong> breaking the process into smaller decisions to reduce uncertainty.</li>
-        <li><strong>Project-based choices:</strong> starting from the user's goals, project stage, and constraints.</li>
-        <li><strong>Flexible navigation:</strong> allowing users to follow recommendations or browse methods manually.</li>
-        <li><strong>UX Archive as support:</strong> using the archive as a knowledge source, not just a reading section.</li>
-        <li><strong>Concrete final output:</strong> turning user choices into a generated evaluation plan.</li>
+        <li><strong>Step-by-step guidance:</strong> breaking the process into smaller decisions.</li>
+        <li><strong>Project-based choices:</strong> starting from the user’s goals, stage, and constraints.</li>
+        <li><strong>Flexible navigation:</strong> allowing users to follow recommendations or browse manually.</li>
+        <li><strong>UX Archive as support:</strong> using the archive as a knowledge source.</li>
+        <li><strong>Concrete output:</strong> turning choices into an evaluation plan.</li>
       </ul>
 
-      <div class="asset-slot large" data-src="../../assets/GamiDoc/annotated-prototype-decisions.png">
-        <span>Image placeholder: annotated prototype decisions</span>
-      </div>
+      <figure class="image-block medium-image">
+        <img src="../../assets/GamiDoc/Design%20decisions.png" alt="Design decisions behind the prototype">
+      </figure>
     </section>
 
+    <!-- USER TESTING -->
     <section class="section">
       <p class="kicker">User Testing</p>
       <h2>Validating the Evaluation Planning Prototype</h2>
+
       <p>
         To evaluate the prototype before implementation, I conducted a remote moderated user test with 14 participants.
         The study combined quantitative measures, including UMUX-LITE and rating-scale questions, with qualitative
-        open-ended feedback. The goal was to understand whether users found the step-by-step flow clear, useful,
-        and suitable for planning UX evaluations.
-      </p>
-      <p>
-        <strong>Quantitative result:</strong> the prototype achieved a UMUX-LITE score of 78.79, indicating an expected
-        level of perceived usability. Participants also rated the main aspects of the tool positively, suggesting that
-        the guided structure and recommendation process were generally well received.
+        open-ended feedback.
       </p>
 
-      <div class="asset-slot chart" data-src="../../assets/GamiDoc/umux-lite-results.png">
-        <span>Image placeholder: UMUX-LITE bar chart</span>
+      <div class="result-card">
+        <span class="result-number">76.79</span>
+        <span class="result-label">UMUX-LITE score</span>
+        <p>
+          The result suggested a good level of perceived usability and showed that the guided structure was generally
+          well received.
+        </p>
       </div>
 
-      <h3>Qualitative insights</h3>
+      <h3>Key insights</h3>
       <ul>
-        <li><strong>Clear step-by-step structure:</strong> users appreciated being guided through the evaluation process instead of navigating resources independently.</li>
-        <li><strong>Useful personalized recommendations:</strong> participants valued method suggestions tailored to their goals, project stage, and constraints.</li>
-        <li><strong>Need for clearer explanations:</strong> some users wanted more guidance around certain terms, method selection, and why specific instruments were recommended.</li>
+        <li>Users appreciated the clear step-by-step structure.</li>
+        <li>Participants valued personalized recommendations.</li>
+        <li>Some users needed clearer explanations for terms and recommendations.</li>
       </ul>
-
-      <div class="asset-slot wide" data-src="../../assets/GamiDoc/validated-evaluation-flow.png">
-        <span>Image placeholder: validated flow illustration</span>
-      </div>
     </section>
 
+    <!-- IMPLEMENTATION -->
     <section class="section final-section">
       <p class="kicker">Implementation</p>
-      <h2>From Prototype to Front-End Development</h2>
+      <h2>From prototype to front-end development</h2>
+
       <p>
-        After validating the prototype, the project moved into implementation. The Evaluation Planning flow is currently
-        being developed in React and JavaScript as part of the GamiDoc web platform. I am contributing to the front-end
+        After validating the prototype, the project moved into implementation. The Evaluation Planning flow is being
+        developed in React and JavaScript as part of the GamiDoc web platform. I am contributing to the front-end
         implementation by translating the prototype into reusable components and interactive steps.
       </p>
+
       <p>
         This case study is ongoing and will be updated after the feature is completed and evaluated through a second
         user study. The project is also being developed into a research paper documenting the design process,
         prototype evaluation, and implementation.
       </p>
-
-      <div class="asset-slot final-asset" data-src="../../assets/GamiDoc/under-progress-illustration.png">
-        <span>Image placeholder: under progress illustration</span>
-      </div>
     </section>
+
   </main>
 </body>
 </html>
