@@ -9,6 +9,8 @@
   --max: 820px;
 }
 
+/* General reset */
+
 * {
   box-sizing: border-box;
 }
@@ -25,6 +27,8 @@ body {
   line-height: 1.6;
 }
 
+/* Top navigation */
+
 .case-nav {
   max-width: var(--max);
   margin: 0 auto;
@@ -38,6 +42,8 @@ body {
   text-decoration: none;
   border-bottom: 2px solid var(--yellow);
 }
+
+/* Main page layout */
 
 .case-study {
   max-width: var(--max);
@@ -53,6 +59,8 @@ body {
   padding-top: 34px;
   text-align: center;
 }
+
+/* Typography */
 
 .kicker {
   margin: 0 0 10px;
@@ -112,6 +120,8 @@ h3 {
   margin-left: auto;
 }
 
+/* Lists */
+
 ul {
   max-width: 700px;
   margin: 0 auto 28px;
@@ -124,6 +134,40 @@ li {
 
 li::marker {
   color: var(--yellow);
+}
+
+/* Project information block under hero */
+
+.project-info {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 34px 46px;
+  max-width: 760px;
+  margin: 54px auto 0;
+  padding-top: 34px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+
+.info-item h3 {
+  margin-bottom: 8px;
+  color: var(--blue);
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.info-item p,
+.info-item li {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.info-item ul {
+  max-width: none;
+  margin: 0;
+  padding-left: 18px;
 }
 
 /* Quote cards */
@@ -177,11 +221,11 @@ blockquote::before {
 }
 
 .hero-image {
-  max-width: 520px;
+  max-width: 560px;
 }
 
 .small-image {
-  max-width: 340px;
+  max-width: 360px;
 }
 
 .medium-image {
@@ -257,13 +301,13 @@ figcaption {
   color: var(--muted);
 }
 
-/* Final */
+/* Final section */
 
 .final-section {
   padding-bottom: 100px;
 }
 
-/* Responsive */
+/* Responsive layout */
 
 @media (max-width: 700px) {
   .case-nav,
@@ -274,6 +318,11 @@ figcaption {
 
   .quote-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-info {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .two-column {
