@@ -348,3 +348,11 @@ figcaption {
   display: block;
   background: transparent;
 }
+
+@media (max-width: 768px) {
+  .quote-image-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 36px;
+  }
+}
