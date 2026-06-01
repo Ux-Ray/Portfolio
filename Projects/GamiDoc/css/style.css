@@ -333,3 +333,18 @@ figcaption {
     max-width: 420px;
   }
 }
+
+.quote-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 56px;
+  align-items: center;
+}
+
+.quote-image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent;
+}
