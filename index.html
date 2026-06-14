@@ -2,186 +2,381 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Reyhaaneh — Portfolio</title>
-  <meta name="description" content="UX Designer & HCI MSc. Research-backed experiences, Photovoice thesis, LinkedIn case study.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeteoCast UX Redesign Case Study</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <main class="page" id="top">
+    <a class="back-link" href="https://ux-ray.github.io/Portfolio/">← Back to Portfolio</a>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="navbar-inner">
-      <a class="logo" href="#">
-        <img src="assets/RLogo.png" alt="Logo" />
-      </a>
-
-<!-- NEW -->
-    <span class="nav-greeting">Hi, I am <strong>Reyhaaneh Ahmadi</strong></span>
-
-
-      <nav class="header-actions" aria-label="Contact shortcuts">
-        <a class="icon-link" href="mailto:reyhaneh.ahmd@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M22 8L12 15 2 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-        <a class="icon-link" href="https://linkedin.com/in/reyhaaneh-ahmadi" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-            <path fill="currentColor" d="M20.45 20.45h-3.56v-5.6c0-1.34-.02-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.95v5.71H9.32V9.5h3.41v1.49h.05c.47-.9 1.63-1.86 3.35-1.86 3.58 0 4.24 2.36 4.24 5.42v5.9zM5.34 8.01a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9.5h3.56v10.95zM22 2H2v20h20V2z"/>
-          </svg>
-        </a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO -->
     <section class="hero">
-      <div class="hero-left">
-        <h1>From Computer Science to Human-Centered UX</h1>
+      <div>
+        <div class="kicker"><span class="kicker-dot"></span> Case Study</div>
+        <h1>MeteoCast Professional Weather Platform Redesign</h1>
+        <p class="hero-subtitle">
+          Redesigning a professional WebGIS weather platform to help users access,
+          interpret, and act on complex meteorological data more quickly.
+        </p>
+        <div class="privacy-note">
+          This is a sanitized portfolio version of the UX Challenge project. Private links,
+          raw interview notes, personal contact details, and confidential materials are not included.
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-comparison" aria-label="Current MeteoCast interface compared with redesigned interface">
+          <div class="comparison-label comparison-label-current">Current</div>
+          <div class="comparison-label comparison-label-redesign">Redesign</div>
+
+          <div class="comparison-stage">
+            <figure class="comparison-card comparison-card-current">
+              <img src="../../assets/MeteoCast/p1.png" alt="Current MeteoCast interface before redesign" />
+            </figure>
+
+            <div class="comparison-arrow" aria-hidden="true">→</div>
+
+            <figure class="comparison-card comparison-card-redesign">
+              <img src="../../assets/MeteoCast/p2.png" alt="Redesigned MeteoCast interface concept" />
+            </figure>
+          </div>
+        </div>
+        <div class="mock-panel">
+          <h3>Water & Storms</h3>
+          <small>Default · 16 layers</small>
+
+          <div class="mock-list">
+            <div class="mock-row"><span class="mock-dot">☔</span>Hourly rainfall</div>
+            <div class="mock-row"><span class="mock-dot">☔</span>Accumulated rainfall</div>
+            <div class="mock-row selected"><span class="mock-dot">☔</span>Rainfall rate</div>
+            <div class="mock-row"><span class="mock-dot">⚡</span>Lightning</div>
+            <div class="mock-row"><span class="mock-dot">💧</span>Hydrometric level</div>
+          </div>
+        </div>
+
+
+        <div class="mock-legend">
+          <small>Rainfall rate</small>
+          <strong>4.2</strong> mm/h
+          <div class="mock-scale"></div>
+        </div>
+
+        <div class="mock-timebar">
+          <div class="timebar-top">
+            <div class="play">▶</div>
+            <div class="time-date">Thu 28 May · 12:00</div>
+            <div class="day-chips">
+              <span>24</span>
+              <span>25</span>
+              <span>26</span>
+              <span>27</span>
+              <span class="active">28</span>
+              <span>29</span>
+              <span>30</span>
+            </div>
+          </div>
+          <div class="mock-slider"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="meta-grid" aria-label="Project information">
+      <div class="meta-card">
+        <h3>Methods</h3>
+        <ul>
+          <li>Information architecture analysis</li>
+          <li>User interviews</li>
+          <li>Sketching</li>
+          <li>User testing</li>
+        </ul>
+      </div>
+
+      <div class="meta-card">
+        <h3>Role</h3>
+        <p>UX researcher, UX/UI designer, information architecture contributor.</p>
+      </div>
+
+      <div class="meta-card">
+        <h3>Context</h3>
+        <p>UX Challenge 2026, team project with Radarmeteo.</p>
+      </div>
+
+      <div class="meta-card">
+        <h3>Tools</h3>
+        <p>Figma, Miro, Claude AI, HTML/CSS prototype, interview notes.</p>
+      </div>
+
+      <div class="meta-card">
+        <h3>Duration</h3>
+        <p>One-week UX design sprint.</p>
+      </div>
+    </section>
+
+    <section class="process-overview" id="process">
+      <div class="process-header">
+        <div class="section-label flat">Process</div>
+        <div>
+          <h2>An adapted Design Sprint for a one-week UX Challenge.</h2>
+          <p>
+            To structure our work, we followed an adapted Design Sprint process. This helped us
+            move quickly from understanding the problem to testing and refining a prototype
+            within one week.
+          </p>
+        </div>
+      </div>
+
+      <div class="sprint-diagram" aria-label="Adapted Design Sprint process">
+        <article class="sprint-card">
+          <div class="sprint-top">
+            <span class="sprint-number">01</span>
+            <span class="sprint-date">22–23.05</span>
+          </div>
+          <div class="sprint-icon">🧭</div>
+          <h3>Map</h3>
+          <p>Understand the product, challenge brief, users, and initial problem space.</p>
+        </article>
+
+        <article class="sprint-card">
+          <div class="sprint-top">
+            <span class="sprint-number">02</span>
+            <span class="sprint-date">24–25.05</span>
+          </div>
+          <div class="sprint-icon">🎤</div>
+          <h3>Test</h3>
+          <p>Run first interviews and identify friction in the existing platform.</p>
+        </article>
+
+        <article class="sprint-card">
+          <div class="sprint-top">
+            <span class="sprint-number">03</span>
+            <span class="sprint-date">26.05</span>
+          </div>
+          <div class="sprint-icon">✏️</div>
+          <h3>Sketch</h3>
+          <p>Explore interface directions and translate insights into early ideas.</p>
+        </article>
+
+        <article class="sprint-card">
+          <div class="sprint-top">
+            <span class="sprint-number">04</span>
+            <span class="sprint-date">27.05</span>
+          </div>
+          <div class="sprint-icon">✅</div>
+          <h3>Decide + Prototype</h3>
+          <p>Select the strongest direction, start prototyping, and test again.</p>
+        </article>
+
+        <article class="sprint-card">
+          <div class="sprint-top">
+            <span class="sprint-number">05</span>
+            <span class="sprint-date">28.05</span>
+          </div>
+          <div class="sprint-icon">⚡</div>
+          <h3>Prototype + Test</h3>
+          <p>Refine the prototype and collect final feedback from product users.</p>
+        </article>
+      </div>
+
+      <p class="sprint-caption">
+        Figure 1. Adapted Design Sprint process followed during the UX Challenge.
+      </p>
+    </section>
+
+    <section class="section" id="map">
+      <div class="section-label">Map</div>
+      <div class="section-content">
+        <h2>Understanding the product, users, and challenge.</h2>
         <p>
-           I began in Computer Science and spent years inside IT teams, but I kept seeing the same gap:
-  products shipped without a clear view of people. That curiosity led me to study Human–Computer
-  Interaction (MSc, University of Trento). Today I combine technical depth with user-centred
-  research and design to create experiences that are usable, inclusive, and effective.
+          We started by reviewing MeteoCast, a professional WebGIS platform for visualizing
+          historical, real-time, and forecast meteorological data. The challenge focused on
+          improving menu organization, data visualization flow, and time navigation.
+        </p>
+        <p>
+          In this phase, we created How Might We questions and used them to frame possible
+          design opportunities around clarity, speed, and lower cognitive load.
+        </p>
+        <figure class="section-figure">
+          <img src="../../assets/MeteoCast/HML.png" alt="How Might We questions created during the Map phase" />
+          <figcaption>How Might We questions</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="test-one">
+      <div class="section-label">Test</div>
+      <div class="section-content">
+        <h2>Learning from early user interviews.</h2>
+        <p>
+          The first tests helped us understand how professional users worked with the existing
+          platform. Many users needed fast answers under time pressure, but the navigation,
+          terminology, and temporal structure made this difficult. Based on these findings, and considering the limited time
+  available during the design sprint, we prioritized the HMWs that could have the strongest
+  impact on professional users’ urgent workflows.
         </p>
 
-        <div class="hero-ctas">
-          <!-- CV Link ------------------------>
-          <a class="btn primary" href="https://drive.google.com/file/d/1423e99OElpVVo7TPuXK8SsONbV6vJPMT/view?usp=drive_link">Download CV</a>
-          <!-- --------------------- -->
-          <a class="btn ghost" href="mailto:reyhaneh.ahmd@gmail.com">Email me</a>
+        <div class="insight-list">
+          <div class="insight-item">
+            <div class="number">1</div>
+            <div>
+              <strong>Navigation was too complex for urgent workflows.</strong>
+              Users needed fewer steps to reach the data they used most often.
+            </div>
+          </div>
+
+          <div class="insight-item">
+            <div class="number">2</div>
+            <div>
+              <strong>The timeline created confusion.</strong>
+              Users expected past, present, and forecast data to feel connected.
+            </div>
+          </div>
+
+          <div class="insight-item">
+            <div class="number">3</div>
+            <div>
+              <strong>Map interpretation needed support.</strong>
+              Legends, colors, and symbols were not always clear enough for quick decisions.
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="hero-right">
-        <img src="assets/woman.jpg" alt="Minimal line-art portrait" />
+    <section class="section" id="sketch">
+      <div class="section-label">Sketch</div>
+      <div class="section-content">
+        <h2>Exploring possible interface directions.</h2>
+        <p>
+          After identifying the main friction points, we sketched different ways to simplify
+          navigation, improve the map workspace, make alerts more visible, and support a
+          clearer relationship between real-time, forecast, and historical data. Before sketching solutions, we also looked at comparable weather and GIS platforms to
+  understand common interaction patterns for dense map-based data, timelines, overlays,
+  alerts, and professional weather monitoring. This competitive analysis helped us collect
+  references and identify ideas that could be adapted to MeteoCast.
+        </p>
+        <div class="section-image-pair">
+          <figure class="section-figure">
+            <img src="../../assets/MeteoCast/sketch1.png" alt="First sample sketch from the Sketch phase" />
+            <figcaption>Sketch sample 1</figcaption>
+          </figure>
+          <figure class="section-figure">
+            <img src="../../assets/MeteoCast/sketch2.png" alt="Second sample sketch from the Sketch phase" />
+            <figcaption>Sketch sample 2</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
-
-      <div class="projects-grid">
-
-     
-      <!-- Project Gamidoc -->
-<article class="project-card">
-  <img class="project-thumb" src="assets/gamidoc.png" alt="GamiDoc" />
-  <div class="project-copy">
-    <p class="project-kicker">UX / RESEARCH / PRODUCT DESIGN</p>
-    <h3>Case Study — GamiDoc Evaluation Planning Flow</h3>
-    <p>
-      Designing a project-based workflow that guides users from evaluation goals to suitable methods, 
-      instruments, and a structured evaluation plan.
-    </p>
-    <a class="btn primary large" href="Projects/GamiDoc/index.html" target="_blank" rel="noopener">
-      View Case Study
-    </a>
-  </div>
-</article>  
-        
-        
-        
-        
-        
-        <!-- Project LinkedIn -->
-<article class="project-card">
-  <img class="project-thumb" src="assets/LinedIn.png" alt="LinkedIn application flow mockups" />
-  <div class="project-copy">
-    <p class="project-kicker">UX / PRODUCT / CASE STUDY</p>
-    <h3>Case Study — Improving How Users Apply &amp; Succeed on LinkedIn</h3>
-    <p>
-      Streamlining the job-application journey, clarifying guidance,
-      and surfacing actionable feedback so applicants can apply with confidence and improve outcomes.
-    </p>
-    <a class="btn primary large" href="Projects/LinkedIn/Index-LinkedIn.html" target="_blank" rel="noopener">
-      View Case Study
-    </a>
-  </div>
-</article>
-
-
-
-  <!-- Project 2 -->
-<article class="project-card">
-  <img class="project-thumb" src="assets/girl1.png" alt="Comic-style digital storytelling scene" />
-  <div class="project-copy">
-    <p class="project-kicker">THESIS / RESEARCH</p>
-    <h3>Thesis — Digital Storytelling + Photovoice</h3>
-    <p>
-      I explored how a comic-style digital storytelling platform can support the Photovoice
-      methodology and deepen reflection on gender-based discrimination among students.
-    </p>
-    <a class="btn primary large" href="https://drive.google.com/file/d/1qdA_ztaOQpQHBgzz2GFcMJg2ps1xRfjF/view?usp=drive_link" target="_blank" rel="noopener">
-      View Case Study
-    </a>
-  </div>
-</article>
-
- <!-- Project 3 -->
-<article class="project-card">
-  <img class="project-thumb" src="assets/bus1.png" alt="Comic-style digital storytelling scene" />
-  <div class="project-copy">
-    <p class="project-kicker">UX/ RESEARCH</p>
-    <h3>Case Study — Investigating Perceived Safety of Autonomous Buses</h3>
-    <p>
-      Exploring how passengers perceive trust, safety, and the role of drivers in the future of autonomous public transport.
-
-    </p>
-    <a class="btn primary large" href="https://ux-ray.github.io/Portfolio/Projects/autonomousBus/index.html" target="_blank" rel="noopener">
-      View Case Study
-    </a>
-  </div>
-</article>
-        
-
+    <section class="section" id="decide">
+      <div class="section-label">Decide</div>
+      <div class="section-content">
+        <h2>Choosing a more task-oriented direction.</h2>
+        <p>
+          We decided to move away from a purely service-based structure and explore
+          phenomenon-based navigation. This meant organizing the interface around weather
+          situations such as rain, wind, storms, temperature, and visibility.
+        </p>
+        <p>
+          We also prioritized presets, a unified timebar, clearer search, and a more actionable
+          alert system.
+        </p>
+        <figure class="section-figure">
+          <img src="../../assets/MeteoCast/sketch3.png" alt="Sketch showing the selected direction in the Decide phase" />
+          <figcaption>Selected direction sketch</figcaption>
+        </figure>
       </div>
     </section>
+
+    <section class="section" id="prototype">
+      <div class="section-label">Prototype</div>
+      <div class="section-content">
+        <h2>Building an interactive concept.</h2>
+        <p>
+          The prototype gave more space to the map, reduced the visual weight of the menu,
+          and introduced clearer access to weather categories, location search, alerts, legends,
+          presets, and time controls.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">☔</div>
+            <h3>Phenomenon-based menu</h3>
+            <p>Parameters were grouped by weather phenomena to reduce reliance on technical service names.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">＋</div>
+            <h3>Custom presets</h3>
+            <p>Users could save recurring parameter groups for faster access to repeated workflows.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">⏱</div>
+            <h3>Unified timebar</h3>
+            <p>The timebar supported movement across past, real-time, and forecast data.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">⚠</div>
+            <h3>Actionable alerts</h3>
+            <p>Alerts were designed to communicate risk type, severity, timing, and location.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="test-two">
+      <div class="section-label">Test again</div>
+      <div class="section-content">
+        <h2>Validating and refining the redesign.</h2>
+        <p>
+          The second round of testing showed that the redesigned direction was promising,
+          especially the weather-phenomenon menu and the timebar interaction. However,
+          some areas still needed refinement.
+        </p>
+
+        <div class="testing-grid">
+          <div class="testing-card">
+            <strong>Clearer</strong>
+            <span>Users understood several parts of the phenomenon-based navigation.</span>
+          </div>
+
+          <div class="testing-card">
+            <strong>Needed</strong>
+            <span>More visual clarity between past, real-time, and forecast data.</span>
+          </div>
+
+          <div class="testing-card">
+            <strong>Next</strong>
+            <span>Improve presets, onboarding, alert source, probability, and location.</span>
+          </div>
+        </div>
+
+        <figure class="section-figure prototype-figure">
+          <img src="../../assets/MeteoCast/prototype.png" alt="MeteoCast prototype screen tested during the second validation round" />
+          <figcaption>Prototype used for the second round of testing</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="reflection">
+      <div class="section-label">Reflection</div>
+      <div class="section-content">
+        <h2>Expert tools need managed complexity, not oversimplification.</h2>
+        <p>
+          This project helped me understand that UX for professional platforms is not only
+          about making an interface visually cleaner. It is about helping users make sense of
+          complex information quickly, especially when decisions are time-sensitive.
+        </p>
+        <p>
+          The main lesson was that the information architecture should reflect how users think
+          and work. In MeteoCast, this meant shifting from service-centered navigation toward
+          workflows based on phenomena, risks, locations, and time.
+        </p>
+      </div>
+    </section>
+
   </main>
-
-  <!-- FOOTER (dark panel with centered copyright) -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-text">
-        <h2>Contact Me</h2>
-        <p class="muted">Open to UX roles, research-driven projects, and collaborations.</p>
-
-        <div class="footer-info">
-          <a href="mailto:Reyhaneh.ahmd@gmail.com">Reyhaneh.ahmd@gmail.com</a>
-          <span>•</span>
-          <a href="https://linkedin.com/in/reyhaaneh-ahmadi" target="_blank">linkedin.com/in/reyhaaneh-ahmadi</a>
-        </div>
-      </div>
-
-      <img class="footer-plane" src="assets/paper-jet-white.png" alt="" />
-
-      <p class="footer-copy">© 2025 Reyhaaneh. All rights reserved.</p>
-    </div>
-  </footer>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
