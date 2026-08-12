@@ -86,13 +86,13 @@ h2 {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 42px;
 }
 
 h2 {
   max-width: 780px;
   margin-inline: auto;
-  font-size: 34px;
+  font-size: 30px;
 }
 
 .story-section h2 {
@@ -443,11 +443,11 @@ figcaption {
 
 @media (max-width: 900px) {
   h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 27px;
   }
 
   .project-info,
@@ -479,11 +479,11 @@ figcaption {
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 29px;
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .subtitle {
