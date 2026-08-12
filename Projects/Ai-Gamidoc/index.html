@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GamiDoc Collaborative AI Agent</title>
+  <meta name="description" content="Portfolio case study for adding a collaborative AI planning agent to the GamiDoc evaluation planning flow.">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+  <main class="case-study">
+    <a class="back-link" href="https://ux-ray.github.io/Portfolio/index.html">&larr; Back to Portfolio</a>
+
+    <section class="intro-section">
+      <p class="section-label">Case Study</p>
+      <h1>GamiDoc Collaborative AI Agent</h1>
+      <p class="subtitle">Extending GamiDoc from a guided evaluation flow into a collaborative AI-supported planning experience.</p>
+      <p class="intro-copy">
+        After redesigning the GamiDoc evaluation planning flow, I explored how a collaborative AI agent could
+        help users move from uncertainty to a concrete study plan. The agent is designed to ask focused
+        questions, capture study context, and guide users toward the right evaluation decisions without
+        making the process feel overwhelming.
+      </p>
+
+      <figure class="hero-figure">
+        <img src="assets/ux_v3/ai-agent-hero.png" alt="A user reviewing the GamiDoc planning interface with a friendly AI assistant.">
+      </figure>
+    </section>
+
+    <section class="project-info" aria-label="Project information">
+      <div class="info-column">
+        <h2>Methods</h2>
+        <ul>
+          <li>Follow-up user feedback analysis</li>
+          <li>AI-assisted workflow redesign</li>
+          <li>Conversational interaction design</li>
+          <li>Information architecture refinement</li>
+          <li>Prototype evaluation planning</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Role</h2>
+        <p>UX researcher</p>
+        <p>UX/UI designer</p>
+        <p>Front-end contributor</p>
+        <p>AI workflow designer</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Context</h2>
+        <p>Follow-up work after the GamiDoc evaluation planning redesign</p>
+        <p>Fondazione Bruno Kessler (FBK), Italy</p>
+        <p>GamiDoc platform</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Tools</h2>
+        <p>Figma</p>
+        <p>FigJam</p>
+        <p>Python</p>
+        <p>LangChain</p>
+        <p>HTML/CSS</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Year</h2>
+        <p>2026</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Duration</h2>
+        <p>July 2026 - Present</p>
+        <p>Ongoing</p>
+      </div>
+    </section>
+
+    <section class="story-section problem-section">
+      <p class="section-label">Problem Statement</p>
+      <h2>Users still needed help turning evaluation goals into a clear plan.</h2>
+      <p class="body-copy">
+        The previous GamiDoc evaluation showed that the guided flow was clear and usable, but users still
+        needed stronger support when moving from selected goals to concrete evaluation decisions. Feedback
+        highlighted that recommendations could feel generic, that users wanted clearer explanations of why
+        methods fit their project, and that manual selection could create choice overload. This created the
+        opportunity to add a collaborative AI agent.
+      </p>
+
+      <div class="quote-grid">
+        <article class="quote-card">
+          <span class="portrait portrait-short" aria-hidden="true"></span>
+          <p>&ldquo;It feels generic and not personalized.&rdquo;</p>
+        </article>
+        <article class="quote-card">
+          <span class="portrait portrait-soft" aria-hidden="true"></span>
+          <p>&ldquo;I do not have explanations on how it fits my project.&rdquo;</p>
+        </article>
+        <article class="quote-card">
+          <span class="portrait portrait-long" aria-hidden="true"></span>
+          <p>&ldquo;I thought it would give me full instruments.&rdquo;</p>
+        </article>
+        <article class="quote-card">
+          <span class="portrait portrait-bun" aria-hidden="true"></span>
+          <p>&ldquo;It is more of a receipt than a guide.&rdquo;</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <p class="section-label">Main Insight</p>
+      <h2>The next layer of guidance needed to be collaborative, not only structural.</h2>
+      <p class="body-copy">
+        The first redesign organized GamiDoc into a step-by-step evaluation planning flow. The follow-up
+        insight was that structure alone was not enough for early-stage planning. Users also needed contextual
+        rationale, more actionable next steps, and intelligent support for choosing instruments. The AI agent
+        became a design response to those needs.
+      </p>
+
+      <figure class="wide-figure diagram-figure" aria-label="Collaborative AI planning flow diagram">
+        <div class="flow-diagram">
+          <span>Study idea</span>
+          <span>AI questions</span>
+          <span>Context draft</span>
+          <span>Method guidance</span>
+          <span>Review</span>
+          <span>Study plan</span>
+        </div>
+      </figure>
+    </section>
+
+    <section class="story-section">
+      <p class="section-label">Design Focus</p>
+      <h2>Sketching the AI agent as a planning companion.</h2>
+      <p class="body-copy">
+        Before moving into implementation, I explored the new planning experience through low-fidelity
+        sketches and iterated on the structure several times. After shaping the general idea in Figma, I
+        prototyped it faster as a working website in Codex so I could test the flow, adjust the interaction,
+        and finalize the direction. This early sketch compared manual planning with AI-supported planning
+        and helped me define where the collaborative agent should enter the workflow.
+      </p>
+
+      <div class="sketch-stack">
+        <figure class="wide-figure">
+          <img src="assets/ux_v3/sketch-planning-choice.png" alt="Black-and-white sketch of choosing between manual planning and AI-supported planning.">
+          <figcaption>Sketch: choosing between guided manual planning and collaborative AI planning.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-section technical-section">
+      <p class="section-label">Technical Direction</p>
+      <h2>Translating the sketch into an AI-supported workflow.</h2>
+      <p class="body-copy">
+        To move from the sketch concept to a working AI-supported planning flow, I explored how the agent
+        should reason over GamiDoc's evaluation knowledge. I worked with LangChain to structure the
+        conversational flow, then analyzed where simple prompting was not enough. Because the agent needed
+        to connect user context with methods, instruments, and rationale from a curated knowledge base, I
+        identified RAG as an important technical direction. This allowed the design to become more than a
+        chat interface: the agent could retrieve relevant UX evaluation knowledge, explain why a method fits
+        a user's project, and support more personalized planning decisions. I also mapped the background
+        interaction behind the chat screen, including session state, local validation, fallback behavior, and
+        the LangChain agent layer.
+      </p>
+
+      <figure class="technical-figure">
+        <img src="assets/ux_v3/technical-sequence-diagram.png" alt="Sequence diagram showing the backend and agent-layer flow behind the AI contextual interview.">
+        <figcaption>Technical concept: how the chat answer moves through session state, validation, LangChain interpretation, and project context updates.</figcaption>
+      </figure>
+    </section>
+
+    <section class="story-section">
+      <p class="section-label">Prototype Design</p>
+      <h2>From guided workflow to interactive AI-supported planning.</h2>
+      <p class="body-copy">
+        The prototype connects the original GamiDoc planning steps with a conversational layer. Users can
+        begin with a study idea, answer focused prompts, review the generated context, and continue into
+        method and instrument selection with a stronger sense of direction.
+      </p>
+
+      <figure class="wide-figure">
+        <img src="assets/ux_v3/prototype-ai-interview-sketch.png" alt="Black-and-white prototype sketch of the AI contextual interview screen.">
+        <figcaption>Prototype sketch: the contextual interview screen where users describe the study idea and the agent builds the first draft context.</figcaption>
+      </figure>
+    </section>
+
+    <section class="story-section status-section">
+      <p class="section-label">Current Status</p>
+      <h2>The AI-supported planning flow currently works, and the final design is still in progress.</h2>
+      <p class="body-copy">
+        This project is still ongoing. The current prototype works as a functional AI-supported planning
+        flow, but I am still refining the final interface, interaction details, and presentation quality.
+        The final design will be shared later after the next iteration is complete.
+      </p>
+
+      <figure class="loading-sketch" aria-label="Sketch of a loading screen for the next project iteration">
+        <div class="loading-window">
+          <div class="window-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="loading-center">
+            <div class="loading-loop" aria-hidden="true"></div>
+            <p>Loading next iteration...</p>
+          </div>
+        </div>
+        <figcaption>Placeholder sketch: final interface will be shared after the next design iteration.</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
