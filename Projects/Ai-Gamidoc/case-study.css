@@ -11,8 +11,8 @@
   --gold: #f0c300;
   --shadow: 0 16px 38px rgba(29, 39, 75, 0.08);
   --soft-shadow: 0 8px 24px rgba(29, 39, 75, 0.06);
-  --content: 980px;
-  --text: 760px;
+  --content: 940px;
+  --text: 700px;
 }
 
 *,
@@ -28,7 +28,7 @@ body {
     radial-gradient(circle at 50% 4%, rgba(231, 228, 255, 0.95), transparent 32%),
     linear-gradient(180deg, #ffffff 0%, var(--page) 42%, #ffffff 100%);
   font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.55;
 }
 
@@ -50,7 +50,7 @@ img {
 .back-link {
   display: inline-block;
   color: #000;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
   border-bottom: 2px solid var(--gold);
@@ -72,7 +72,7 @@ img {
 .section-label {
   margin: 0 0 22px;
   color: var(--blue);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
 }
 
@@ -86,13 +86,13 @@ h2 {
 }
 
 h1 {
-  font-size: 58px;
+  font-size: 48px;
 }
 
 h2 {
   max-width: 780px;
   margin-inline: auto;
-  font-size: 42px;
+  font-size: 34px;
 }
 
 .story-section h2 {
@@ -101,20 +101,27 @@ h2 {
 }
 
 .subtitle {
-  max-width: 920px;
-  margin: 18px auto 0;
+  max-width: 860px;
+  margin: 16px auto 0;
   color: var(--muted);
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.35;
 }
 
 .intro-copy,
 .body-copy {
   max-width: var(--text);
-  margin: 28px auto 0;
+  margin: 24px auto 0;
   color: #000;
-  font-size: 21px;
-  line-height: 1.55;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.intro-copy a {
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .story-section .body-copy {
@@ -128,8 +135,8 @@ h2 {
 }
 
 .hero-figure {
-  width: min(600px, 100%);
-  padding: 8px;
+  width: min(500px, 100%);
+  padding: 6px;
   border-radius: 14px;
   background: linear-gradient(180deg, #fff, var(--lilac));
   box-shadow: var(--soft-shadow);
@@ -143,7 +150,7 @@ h2 {
   display: grid;
   grid-template-columns: 1.25fr 0.9fr 1.15fr;
   gap: 44px 72px;
-  margin-top: 52px;
+  margin-top: 44px;
   padding: 36px 0 38px;
   border-top: 1px solid #ddd7ce;
 }
@@ -157,7 +164,7 @@ h2 {
   margin: 0 0 10px;
   color: var(--blue);
   font-family: inherit;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.25;
   letter-spacing: 0;
 }
@@ -166,7 +173,7 @@ h2 {
 .info-column li {
   margin: 0;
   color: #000;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.5;
 }
 
@@ -210,7 +217,7 @@ h2 {
 .quote-card p {
   margin: 0;
   color: #202231;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.28;
 }
@@ -276,7 +283,7 @@ h2 {
 }
 
 .wide-figure {
-  width: min(920px, 100%);
+  width: min(840px, 100%);
 }
 
 .wide-figure img,
@@ -302,13 +309,14 @@ h2 {
 .flow-diagram span {
   display: grid;
   place-items: center;
-  min-height: 70px;
+  min-height: 62px;
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--blue-soft);
   color: var(--ink);
   font-weight: 700;
+  font-size: 16px;
 }
 
 .prototype-stack {
@@ -336,7 +344,7 @@ h2 {
 }
 
 .technical-figure {
-  width: min(1120px, calc(100vw - 48px));
+  width: min(960px, calc(100vw - 48px));
   margin: 52px 50% 0;
   transform: translateX(-50%);
 }
@@ -353,7 +361,7 @@ h2 {
 }
 
 .loading-sketch {
-  width: min(620px, 100%);
+  width: min(540px, 100%);
   margin: 54px auto 0;
 }
 
@@ -422,31 +430,24 @@ h2 {
 .loading-center p {
   margin: 0;
   color: #111;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
 }
 
 figcaption {
   margin-top: 14px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
-}
-
-.intro-copy a {
-  color: inherit;
-  font: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 @media (max-width: 900px) {
   h1 {
-    font-size: 46px;
+    font-size: 40px;
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 30px;
   }
 
   .project-info,
@@ -478,20 +479,20 @@ figcaption {
   }
 
   h1 {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .subtitle {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .intro-copy,
   .body-copy {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .quote-card {
