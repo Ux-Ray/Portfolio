@@ -433,6 +433,13 @@ figcaption {
   text-align: center;
 }
 
+.intro-copy a {
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 900px) {
   h1 {
     font-size: 46px;
