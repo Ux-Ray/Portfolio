@@ -8,15 +8,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<script>
-  function showCVMessage() {
-    document.getElementById("cv-message").style.display = "flex";
-  }
-
-  function closeCVMessage() {
-    document.getElementById("cv-message").style.display = "none";
-  }
-</script>
   
 <body>
 
@@ -57,11 +48,30 @@
         </p>
 
         <div class="hero-ctas">
-          <!-- CV Link ------------------------>
-<!-- CV notification -->
+
+  <!-- CV button -->
+  <button class="btn primary" type="button" onclick="showCVMessage()">
+    Download CV
+  </button>
+
+  <a class="btn ghost" href="mailto:reyhaneh.ahmd@gmail.com">
+    Email me
+  </a>
+
+</div>
+
+<!-- CV notification popup -->
 <div id="cv-message" class="cv-popup">
   <div class="cv-popup-content">
-    <button class="cv-close" type="button" onclick="closeCVMessage()">&times;</button>
+
+    <button
+      class="cv-close"
+      type="button"
+      onclick="closeCVMessage()"
+      aria-label="Close"
+    >
+      &times;
+    </button>
 
     <h3>CV temporarily unavailable</h3>
 
@@ -73,11 +83,9 @@
     <a class="btn primary" href="mailto:reyhaneh.ahmd@gmail.com">
       Request my CV
     </a>
+
   </div>
-</div>          <!-- --------------------- -->
-          <a class="btn ghost" href="mailto:reyhaneh.ahmd@gmail.com">Email me</a>
-        </div>
-      </div>
+</div>
 
       <div class="hero-right">
         <img src="assets/woman.jpg" alt="Minimal line-art portrait" />
@@ -215,6 +223,28 @@ Designing a RAG-powered AI agent that helps researchers plan UX evaluations thro
       <p class="footer-copy">© 2025 Reyhaaneh. All rights reserved.</p>
     </div>
   </footer>
+
+
+<script>
+  function showCVMessage() {
+    document.getElementById("cv-message").style.display = "flex";
+  }
+
+  function closeCVMessage() {
+    document.getElementById("cv-message").style.display = "none";
+  }
+
+  // Close popup when clicking outside the box
+  document.getElementById("cv-message").addEventListener("click", function(event) {
+    if (event.target === this) {
+      closeCVMessage();
+    }
+  });
+</script>
+
+</body>
+</html>
+  
 
 </body>
 </html>
